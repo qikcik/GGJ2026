@@ -8,50 +8,59 @@ class SimpleAnimationActor : public ActorBase
 public:
     ACTOR_BODY(SimpleAnimationActor);
 
-    SimpleAnimationActor() = default;
+    SimpleAnimationActor() : frames(2) {
+
+    };
 
     void onPlaced(GameContext &ctx) override {
-        frame1.modelRef = ctx.world.getModel(frame1.modelRef.path);
-        frame2.modelRef = ctx.world.getModel(frame2.modelRef.path);
+        for (auto& it : frames)
+        {
+            it.modelRef = ctx.world.getModel(it.modelRef.path);
+        }
     }
 
     void onUpdate(GameContext &ctx) override {
         time -= ctx.deltaTime;
 
         if (time <= 0.0f) {
-            time = ctx.config.animationTime;
-            frame = !frame;
+            time = ctx.config.animationTime * timeModifier;
+            frame+=1;
         }
+
+        if (frame >= frames.size())
+            frame = 0;
     }
 
     void onDraw(GameContext &) override {
-        if (frame) {
-            frame1.position = pos;
-            DrawModelEx(frame1.modelRef.model->model, frame1.position, Vector3{0,1,0},0, Vector3(1.f,1.f,1.f), WHITE);
-        }
-        else {
-            frame2.position = pos;
-            DrawModelEx(frame2.modelRef.model->model, frame2.position, Vector3{0,1,0},0, Vector3(1.f,1.f,1.f), WHITE);
-        }
+        frames[frame].position = pos;
+        DrawModelEx(frames[frame].modelRef.model->model, frames[frame].position, Vector3{0,1,0},0, Vector3(1.f,1.f,1.f), WHITE);
+
     }
 
     BoundingBox getBoundingBox() override {
-        return frame1.boundingBox();
+        return frames[frame].boundingBox();
     }
 
     void onSerialize(ISerialize *inSerialize, GameContext &context) override {
         ActorBase::onSerialize(inSerialize, context);
-        inSerialize->propertyStruct("frame1",[&](ISerialize *inSerialize) {
-            frame1.onSerialize(inSerialize,context.world.modelNames());
-        });
-        inSerialize->propertyStruct("frame2",[&](ISerialize *inSerialize) {
-            frame2.onSerialize(inSerialize,context.world.modelNames());
-        });
+        inSerialize->propertyFloat("timeModifier",timeModifier);
+        inSerialize->propertyInt("frameNum",frameNum);
+        if (frameNum<1) frameNum = 1;
+        if (frames.size() < frameNum)
+            frames.resize(frameNum);
+
+        for(int i = 0; i < frameNum ; i++)
+        {
+            inSerialize->propertyStruct("frame"+std::to_string(i+1),[&](ISerialize *inSerialize) {
+                frames[i].onSerialize(inSerialize,context.world.modelNames());
+            });
+        }
     }
 
-    QModelInstance frame1;
-    QModelInstance frame2;
+    int frameNum = 2;
+    float timeModifier = 1.f;
+    int frame = 0;
+    std::vector<QModelInstance> frames;
 
     float time = 0.0f;
-    bool frame = true;
 };
