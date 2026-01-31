@@ -9,6 +9,7 @@
 #include "configHelper.hpp"
 #include "editorContext.hpp"
 #include "selectedWindow.hpp"
+#include "actors/staticActor.hpp"
 
 WindowManager*  WindowManager::instance = nullptr;
 Profiler*  Profiler::instance = nullptr;
@@ -17,6 +18,11 @@ int main(void)
 {
     GameContext gameContext;
     EditorContext editorContext;
+
+    gameContext.actorFactory.entries.push_back({
+        StaticActor::ClassName,
+        [](){return std::make_unique<StaticActor>();}
+    });
 
     ConfigLoad("config",gameContext.config);
     InitAudioDevice();

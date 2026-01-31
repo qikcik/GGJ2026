@@ -10,7 +10,6 @@ class QModelInstance {
 public:
     QModelRef modelRef {};
     Vector3 position {};
-    float rotation {};
 
     BoundingBox boundingBox() {
         return {
@@ -26,7 +25,6 @@ public:
             inSerialize->propertyFloat("y",position.y);
             inSerialize->propertyFloat("z",position.z);
         });
-        inSerialize->propertyFloat("rotation",rotation);
 
         inSerialize->propertyEnum("model",models,modelRef.path);
     }

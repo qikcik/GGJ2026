@@ -3,6 +3,7 @@
 #include <cmath>
 #include <iostream>
 
+#include "actorHelper.hpp"
 #include "editorContext.hpp"
 #include "gameContext.hpp"
 #include "raymath.h"
@@ -54,12 +55,6 @@ public:
         for (const auto& it : world.models)
             it->loadModel(shader);
 
-        float i = -16;
-        for (auto it : world.models)
-        {
-            i += 4;
-            level.instances.push_back(std::make_shared<QModelInstance>(it,Vector3{i*1.f,0,0}));
-        }
         renderer.changeSize({512, 512});
 
     }
@@ -108,7 +103,12 @@ inline void GameWindow::onUpdate(float deltaTime) {
 
     if (isFocused() && mousePos.x >= 0 &&  mousePos.y >= 0 && mousePos.x < renderer.lastRenderedScreenRect.width && mousePos.y < renderer.lastRenderedScreenRect.height ) {
         if (IsKeyPressed(KEY_SPACE)) {
-            level.instances.push_back(std::make_shared<QModelInstance>(world.models[0],Vector3{0,0,0}));
+            if (auto p = editorCtx.selectedModel.lock()) {
+                std::shared_ptr<ActorBase> copy = duplicateActor(p.get(),gameCtx);
+
+                level.actors.push_back(copy);
+                editorCtx.selectedModel = copy;
+            }
         }
 
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
@@ -117,57 +117,76 @@ inline void GameWindow::onUpdate(float deltaTime) {
             RayCollision collision = { 0 };
             collision.distance = FLT_MAX;
             collision.hit = false;
-            std::shared_ptr<QModelInstance> selectedModel {};
-            for (auto it : gameCtx.level.instances)
+            std::shared_ptr<ActorBase> selected {};
+            for (auto it : gameCtx.level.actors)
             {
-                RayCollision boxHitInfo = GetRayCollisionBox(ray, it->boundingBox());
+                RayCollision boxHitInfo = GetRayCollisionBox(ray, it->getBoundingBox());
                 std::cout << boxHitInfo.hit << std::endl;
                 if ((boxHitInfo.hit) && (boxHitInfo.distance < collision.distance)) {
                     collision.distance = boxHitInfo.distance;
                     collision.hit = true;
-                    selectedModel = it;
+                    selected = it;
                 }
             }
-            editorCtx.selectedModel = selectedModel;
+            editorCtx.selectedModel = selected;
         }
 
 
         if (auto p = editorCtx.selectedModel.lock()) {
 
-            if (IsKeyPressed(KEY_A))
-                counter = 0;
-            if (IsKeyPressed(KEY_D))
-                counter = 0;
-            if (IsKeyPressed(KEY_W))
-                counter = 0;
-            if (IsKeyPressed(KEY_S))
-                counter = 0;
+            if (IsKeyDown(KEY_LEFT_CONTROL))
+            {
+                if (IsKeyPressed(KEY_A))
+                    p->pos.x -= p->getBoundingBox().max.x - p->getBoundingBox().min.x;
+                if (IsKeyPressed(KEY_D))
+                    p->pos.x += p->getBoundingBox().max.x - p->getBoundingBox().min.x;
+                if (IsKeyPressed(KEY_W))
+                    p->pos.z -= p->getBoundingBox().max.z - p->getBoundingBox().min.z;
+                if (IsKeyPressed(KEY_S))
+                    p->pos.z += p->getBoundingBox().max.z - p->getBoundingBox().min.x;
 
-            if (IsKeyPressed(KEY_R))
-                counter = 0;
-            if (IsKeyPressed(KEY_F))
-                counter = 0;
-
-            if (counter <= 0) {
-                if (IsKeyDown(KEY_A))
-                    p->position.x -= 0.25;
-                if (IsKeyDown(KEY_D))
-                    p->position.x += 0.25;
-                if (IsKeyDown(KEY_W))
-                    p->position.z -= 0.25;
-                if (IsKeyDown(KEY_S))
-                    p->position.z += 0.25;
-
-                if (IsKeyDown(KEY_R))
-                    p->position.y += 0.25;
-                if (IsKeyDown(KEY_F))
-                    p->position.y -= 0.25;
-                counter = (1.f/GetFrameTime())/ (IsKeyDown(KEY_LEFT_SHIFT) ? 40.f : 10.f);
+                if (IsKeyPressed(KEY_R))
+                    p->pos.y += p->getBoundingBox().max.y - p->getBoundingBox().min.y;
+                if (IsKeyPressed(KEY_F))
+                    p->pos.y -= p->getBoundingBox().max.y - p->getBoundingBox().min.y;
             }
-            counter--;
+            else
+            {
+                if (IsKeyPressed(KEY_A))
+                    counter = 0;
+                if (IsKeyPressed(KEY_D))
+                    counter = 0;
+                if (IsKeyPressed(KEY_W))
+                    counter = 0;
+                if (IsKeyPressed(KEY_S))
+                    counter = 0;
+
+                if (IsKeyPressed(KEY_R))
+                    counter = 0;
+                if (IsKeyPressed(KEY_F))
+                    counter = 0;
+
+                if (counter <= 0) {
+                    if (IsKeyDown(KEY_A))
+                        p->pos.x -= 0.25;
+                    if (IsKeyDown(KEY_D))
+                        p->pos.x += 0.25;
+                    if (IsKeyDown(KEY_W))
+                        p->pos.z -= 0.25;
+                    if (IsKeyDown(KEY_S))
+                        p->pos.z += 0.25;
+
+                    if (IsKeyDown(KEY_R))
+                        p->pos.y += 0.25;
+                    if (IsKeyDown(KEY_F))
+                        p->pos.y -= 0.25;
+                    counter = (1.f/GetFrameTime())/ (IsKeyDown(KEY_LEFT_SHIFT) ? 40.f : 10.f);
+                }
+                counter--;
+            }
 
             if (IsKeyPressed(KEY_DELETE)) {
-                std::erase_if(level.instances, [&](auto el) { return el == p;});
+                std::erase_if(level.actors, [&](auto el) { return el == p;});
             }
 
         }
@@ -179,11 +198,8 @@ inline void GameWindow::onUpdate(float deltaTime) {
     }
 
     auto draw = [&]() {
-        for(auto& it : gameCtx.level.instances) {
-            DrawModelEx(it->modelRef.model->model, it->position, Vector3{0,1,0},it->rotation, Vector3(1.f,1.f,1.f), WHITE);
-        }
-        if (auto p = editorCtx.selectedModel.lock()) {
-            DrawBoundingBox(p->boundingBox(),RED);
+        for(auto& it : gameCtx.level.actors) {
+            it->onDraw(gameCtx);
         }
     };
 
@@ -225,7 +241,7 @@ inline void GameWindow::onUpdate(float deltaTime) {
                 DrawGrid(100,1);
             draw();
             if (auto p = editorCtx.selectedModel.lock()) {
-                DrawBoundingBox(p->boundingBox(), RED );
+                DrawBoundingBox(p->getBoundingBox(), RED );
             }
         EndMode3D();
         DrawFPS(10,10);

@@ -2,15 +2,13 @@
 #include <memory>
 #include <vector>
 
-//#include "graphic3d/meshInstance.hpp"
-
-class QModelInstance;
+#include "actor.hpp"
 
 class Level
 {
 public:
-    std::vector<std::shared_ptr<QModelInstance>> instances {};
+    std::vector<std::shared_ptr<ActorBase>> actors {};
 
-    void saveToFile(std::string name);
-    void loadFromFile(std::string name);
+    void saveToFile(std::string name,GameContext& ctx);
+    void loadFromFile(std::string name,GameContext& ctx);
 };
