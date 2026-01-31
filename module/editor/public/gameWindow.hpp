@@ -23,7 +23,9 @@ std::vector<std::string> loadFromFolder(std::string path)
     for (int idx = 0; idx != dir.count; idx++)
     {
         std::cout<< dir.paths[idx];
-        result.push_back( dir.paths[idx]);
+        std::string path = dir.paths[idx];
+        std::replace(path.begin(), path.end(), '\\', '/');
+        result.push_back( path);
     }
     UnloadDirectoryFiles(dir);
     return result;
