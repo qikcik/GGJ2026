@@ -1,7 +1,6 @@
 #include "level.hpp"
 
 #include <fstream>
-#include <regex.h>
 
 #include "graphic3d/meshInstance.hpp"
 #include "reflection/serializeXML.hpp"
