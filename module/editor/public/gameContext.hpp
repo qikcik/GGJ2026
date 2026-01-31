@@ -1,4 +1,5 @@
 #pragma once
+#include "actor.hpp"
 #include "config.hpp"
 #include "world.hpp"
 #include "level.hpp"
@@ -10,5 +11,7 @@ public:
     Config config;
     World world;
     Level level;
+
+    ActorFactory actorFactory {};
 };
 

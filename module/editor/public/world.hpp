@@ -34,6 +34,6 @@ public:
                 return {it};
             }
         }
-        return {};
+        return {models[0]};
     };
 };

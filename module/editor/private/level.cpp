@@ -1,6 +1,7 @@
 #include "level.hpp"
 
 #include <fstream>
+#include <regex.h>
 
 #include "graphic3d/meshInstance.hpp"
 #include "reflection/serializeXML.hpp"
@@ -8,7 +9,9 @@
 #include <thirdParty/rapidXml/rapidxml_print.hpp>
 #include <thirdParty/rapidXml/rapidxml_utils.hpp>
 
-void Level::saveToFile(std::string name)
+#include "gameContext.hpp"
+
+void Level::saveToFile(std::string name,GameContext& ctx)
 {
     std::cout << name << std::endl;
     rapidxml::xml_document<> root {};
@@ -19,9 +22,11 @@ void Level::saveToFile(std::string name)
     SerializeXMLWriter serializer{&root,node};
 
     serializer.propertyStruct("instances",[&](ISerialize* inSerialize) {
-        for (auto& it : instances) {
+        for (auto& it : actors) {
             inSerialize->propertyStruct("instance",[&](ISerialize* inSerialize) {
-                it->onSerialize(inSerialize,{});
+                std::string temp = it->getClassName();
+                inSerialize->propertyString("TYPE",temp);
+                it->onSerialize(inSerialize,ctx);
             });
         }
     });
@@ -32,9 +37,9 @@ void Level::saveToFile(std::string name)
     root.clear();
 }
 
-void Level::loadFromFile(std::string name)
+void Level::loadFromFile(std::string name,GameContext& ctx)
 {
-    instances.clear();
+    actors.clear();
 
     rapidxml::file<> in(("levels/"+name+".xml").c_str());
     rapidxml::xml_document<> root;
@@ -46,9 +51,17 @@ void Level::loadFromFile(std::string name)
         {
             inSerialize->propertyListStruct("instance",[&](ISerialize* inSerialize)
             {
+                std::string typeName;
+                inSerialize->propertyString("TYPE",typeName);
+
+                auto entry = ctx.actorFactory.getByClassName(typeName);
+                if(!entry) return;
+
                 auto qmodel = std::make_shared<QModelInstance>();
-                qmodel->onSerialize(inSerialize,{});
-                instances.push_back(qmodel);
+                auto actor = entry->construct();
+                actor->onSerialize(inSerialize,ctx);
+                actor->onPlaced(ctx);
+                actors.push_back(std::move(actor));
             });
         });
     });

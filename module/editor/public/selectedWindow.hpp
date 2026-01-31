@@ -45,13 +45,21 @@ public:
         preview.propertyString("level_name",level_name);
 
         if(ImGui::Button("Save")) {
-            gameCtx.level.saveToFile(level_name);
+            gameCtx.level.saveToFile(level_name,gameCtx);
         }
         ImGui::SameLine();
         if(ImGui::Button("Load")) {
-            gameCtx.level.loadFromFile(level_name);
-            for (auto it : gameCtx.level.instances)
-                it->modelRef = gameCtx.world.getModel(it->modelRef.path);
+            gameCtx.level.loadFromFile(level_name,gameCtx);
+        }
+
+        ImGui::Separator();
+        auto names = gameCtx.actorFactory.getNames();
+        ImGui::Combo("Actor to", &editorCtx.selectedActorFactoryEntry, names.data(), names.size()); ImGui::SameLine();
+        if(ImGui::Button("Add"))
+        {
+            auto actor = gameCtx.actorFactory.entries[editorCtx.selectedActorFactoryEntry].construct();
+            actor->onPlaced(gameCtx);
+            gameCtx.level.actors.push_back(std::move(actor));
         }
 
         ImGui::Separator();
@@ -59,8 +67,8 @@ public:
         if(auto p = editorCtx.selectedModel.lock())
         {
             SerializeGuiPreview preview;
-            p->onSerialize(&preview,gameCtx.world.modelNames());
-            p->modelRef = gameCtx.world.getModel(p->modelRef.path);
+            p->onSerialize(&preview,gameCtx);
+            p->onPlaced(gameCtx);
         }
     }
 
