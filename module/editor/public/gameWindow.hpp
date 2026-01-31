@@ -107,6 +107,10 @@ inline void GameWindow::onUpdate(float deltaTime) {
 
 
     if (isFocused() && mousePos.x >= 0 &&  mousePos.y >= 0 && mousePos.x < renderer.lastRenderedScreenRect.width && mousePos.y < renderer.lastRenderedScreenRect.height ) {
+        if (IsKeyPressed(KEY_SPACE)) {
+            level.instances.push_back(std::make_shared<QModelInstance>(world.models[0],Vector3{0,0,0}));
+        }
+
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
         {
             auto ray = GetScreenToWorldRayEx(Vector2{mousePos.x,mousePos.y}, camera, renderer.lastRenderedScreenRect.width, renderer.lastRenderedScreenRect.height);
@@ -138,10 +142,22 @@ inline void GameWindow::onUpdate(float deltaTime) {
                     p->position.z -= 0.25;
                 if (IsKeyDown(KEY_S))
                     p->position.z += 0.25;
-                counter = (1.f/GetFrameTime())/20;
+
+                if (IsKeyDown(KEY_R))
+                    p->position.y += 0.25;
+                if (IsKeyDown(KEY_F))
+                    p->position.y -= 0.25;
+                counter = (1.f/GetFrameTime())/ (IsKeyDown(KEY_LEFT_SHIFT) ? 40.f : 5.f);
             }
             counter--;
+
+            if (IsKeyPressed(KEY_DELETE)) {
+                std::erase_if(level.instances, [&](auto el) { return el == p;});
+            }
+
         }
+
+
 
         if (IsMouseButtonDown(MOUSE_BUTTON_MIDDLE))
             UpdateCamera(&camera,CAMERA_FIRST_PERSON);
@@ -150,6 +166,9 @@ inline void GameWindow::onUpdate(float deltaTime) {
     auto draw = [&]() {
         for(auto& it : gameCtx.level.instances) {
             DrawModelEx(it->modelRef.model->model, it->position, Vector3{0,1,0},it->rotation, Vector3(1.f,1.f,1.f), WHITE);
+        }
+        if (auto p = editorCtx.selectedModel.lock()) {
+            DrawBoundingBox(p->boundingBox(),RED);
         }
     };
 
