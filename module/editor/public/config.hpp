@@ -9,6 +9,7 @@ class Config
 public:
     Camera edCamera;
     float ambient {0.5};
+    float animationTime {0.25f};
     std::string test;
     Light light = { 0 };
     bool grid = false;
@@ -26,6 +27,7 @@ public:
         inSerialize->propertyFloat("ambient", ambient);
         inSerialize->propertyFloat("camera_fov",edCamera.fovy);
         inSerialize->propertyBool("grid",grid);
+        inSerialize->propertyFloat("animationTime",animationTime);
         bool value = edCamera.projection == CAMERA_ORTHOGRAPHIC;
         inSerialize->propertyBool("camera_ortographic",value);
         edCamera.projection = value ? CAMERA_ORTHOGRAPHIC : CAMERA_PERSPECTIVE;

@@ -8,6 +8,7 @@ class QModelInstance;
 
 class GameContext {
 public:
+    float deltaTime = 1.f/60;
     Config config;
     World world;
     Level level;

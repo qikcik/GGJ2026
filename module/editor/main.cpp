@@ -10,6 +10,7 @@
 #include "editorContext.hpp"
 #include "selectedWindow.hpp"
 #include "actors/staticActor.hpp"
+#include "actors/simpleAnimationActor.hpp"
 
 WindowManager*  WindowManager::instance = nullptr;
 Profiler*  Profiler::instance = nullptr;
@@ -22,6 +23,11 @@ int main(void)
     gameContext.actorFactory.entries.push_back({
         StaticActor::ClassName,
         [](){return std::make_unique<StaticActor>();}
+    });
+
+    gameContext.actorFactory.entries.push_back({
+        SimpleAnimationActor::ClassName,
+        [](){return std::make_unique<SimpleAnimationActor>();}
     });
 
     ConfigLoad("config",gameContext.config);
