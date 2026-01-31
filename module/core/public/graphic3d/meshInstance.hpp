@@ -20,11 +20,11 @@ public:
 
     void onSerialize(ISerialize* inSerialize,std::vector<std::string> models)
     {
-        inSerialize->propertyStruct("position",[&](ISerialize* inSerialize) {
+        /*inSerialize->propertyStruct("position",[&](ISerialize* inSerialize) {
             inSerialize->propertyFloat("x",position.x);
             inSerialize->propertyFloat("y",position.y);
             inSerialize->propertyFloat("z",position.z);
-        });
+        });*/
 
         inSerialize->propertyEnum("model",models,modelRef.path);
     }
