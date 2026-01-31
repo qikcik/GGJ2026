@@ -221,7 +221,8 @@ inline void GameWindow::onUpdate(float deltaTime) {
         rlSetUniform(shadowMapLoc, &textureActiveSlot, SHADER_UNIFORM_INT, 1);
 
         BeginMode3D(camera);
-            DrawGrid(100,1);
+            if(config.grid)
+                DrawGrid(100,1);
             draw();
             if (auto p = editorCtx.selectedModel.lock()) {
                 DrawBoundingBox(p->boundingBox(), RED );

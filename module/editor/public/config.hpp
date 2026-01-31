@@ -11,6 +11,7 @@ public:
     float ambient {0.5};
     std::string test;
     Light light = { 0 };
+    bool grid = false;
 
     Config() {
         edCamera.position = (Vector3){ 25, 25.0f, 50 };
@@ -24,7 +25,7 @@ public:
     {
         inSerialize->propertyFloat("ambient", ambient);
         inSerialize->propertyFloat("camera_fov",edCamera.fovy);
-
+        inSerialize->propertyBool("grid",grid);
         bool value = edCamera.projection == CAMERA_ORTHOGRAPHIC;
         inSerialize->propertyBool("camera_ortographic",value);
         edCamera.projection = value ? CAMERA_ORTHOGRAPHIC : CAMERA_PERSPECTIVE;
