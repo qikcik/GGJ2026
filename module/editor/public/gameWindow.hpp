@@ -85,6 +85,7 @@ protected:
 };
 
 inline void GameWindow::onUpdate(float deltaTime) {
+    gameCtx.deltaTime = deltaTime;
     auto _ = ScopeProfile("onUpdate");
 
     auto& world = gameCtx.world;
@@ -195,6 +196,10 @@ inline void GameWindow::onUpdate(float deltaTime) {
 
         if (IsMouseButtonDown(MOUSE_BUTTON_MIDDLE))
             UpdateCamera(&camera,CAMERA_FIRST_PERSON);
+    }
+
+    for(auto& it : gameCtx.level.actors) {
+        it->onUpdate(gameCtx);
     }
 
     auto draw = [&]() {
