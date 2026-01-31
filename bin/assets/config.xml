@@ -5,15 +5,15 @@
 	<camera_ortographic>true</camera_ortographic>
 	<light>
 		<ambient>
-			<r>0.085106</r>
-			<g>0.056134</g>
-			<b>0.056134</b>
+			<r>0.044715</r>
+			<g>0.024615</g>
+			<b>0.159574</b>
 			<a>0.000000</a>
 		</ambient>
 		<light>
-			<r>0.861702</r>
-			<g>0.880828</g>
-			<b>1.000000</b>
+			<r>0.125792</r>
+			<g>0.146922</g>
+			<b>0.622340</b>
 			<a>0.000000</a>
 		</light>
 		<light.x>0.200000</light.x>
