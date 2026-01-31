@@ -1,7 +1,7 @@
 #pragma once
 
 #define ACTOR_BODY(className) \
-static constexpr std::string ClassName = #className; \
+inline static constexpr const char* ClassName = #className; \
 std::string getClassName() override {return ClassName;}
 #include <memory>
 
