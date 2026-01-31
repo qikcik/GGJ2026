@@ -143,7 +143,7 @@ inline void GameWindow::onUpdate(float deltaTime) {
                 if (IsKeyPressed(KEY_W))
                     p->pos.z -= p->getBoundingBox().max.z - p->getBoundingBox().min.z;
                 if (IsKeyPressed(KEY_S))
-                    p->pos.z += p->getBoundingBox().max.z - p->getBoundingBox().min.x;
+                    p->pos.z += p->getBoundingBox().max.z - p->getBoundingBox().min.z;
 
                 if (IsKeyPressed(KEY_R))
                     p->pos.y += p->getBoundingBox().max.y - p->getBoundingBox().min.y;
