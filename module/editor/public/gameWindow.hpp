@@ -52,7 +52,7 @@ public:
         }
 
         for (const auto& it : world.models)
-            it->loadModel(world.shader);
+            it->loadModel(shader);
 
         float i = -16;
         for (auto it : world.models)
@@ -60,8 +60,6 @@ public:
             i += 4;
             level.instances.push_back(std::make_shared<QModelInstance>(it,Vector3{i*1.f,0,0}));
         }
-        gameCtx.config.light = CreateLight(LIGHT_DIRECTIONAL, (Vector3) { -1, 1, 0.4f }, (Vector3) { 0, 0, 0 }, GRAY, world.shader.shader);
-
         renderer.changeSize({512, 512});
 
     }
@@ -84,6 +82,11 @@ protected:
     GameContext& gameCtx;
     EditorContext& editorCtx;
     int counter = 0;
+
+    Matrix lightView = { 0 };
+    Matrix lightProj = { 0 };
+    Matrix lightViewProj = { 0 };
+    int textureActiveSlot = 10;
 };
 
 inline void GameWindow::onUpdate(float deltaTime) {
@@ -95,15 +98,13 @@ inline void GameWindow::onUpdate(float deltaTime) {
     auto& config = gameCtx.config;
     auto& camera = gameCtx.config.edCamera;
 
+    Vector3 cameraPos = camera.position;
+    SetShaderValue(shader.shader, shader.shader.locs[SHADER_LOC_VECTOR_VIEW], &cameraPos, SHADER_UNIFORM_VEC3);
+
     Vec2f mousePos;
     mousePos.x = (GetMousePosition().x - renderer.lastRenderedScreenRect.x);
     mousePos.y = (GetMousePosition().y - renderer.lastRenderedScreenRect.y);
 
-
-    float cameraPos[3] = { camera.position.x, camera.position.y, camera.position.z };
-    SetShaderValue(world.shader.shader, world.shader.shader.locs[SHADER_LOC_VECTOR_VIEW], cameraPos, SHADER_UNIFORM_VEC3);
-    SetShaderValue(world.shader.shader, world.shader.ambientLoc, (float[4]) { config.ambient, config.ambient, config.ambient, 1.0f }, SHADER_UNIFORM_VEC4);
-    UpdateLightValues(world.shader.shader, config.light);
 
     if (isFocused() && mousePos.x >= 0 &&  mousePos.y >= 0 && mousePos.x < renderer.lastRenderedScreenRect.width && mousePos.y < renderer.lastRenderedScreenRect.height ) {
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
@@ -146,21 +147,50 @@ inline void GameWindow::onUpdate(float deltaTime) {
             UpdateCamera(&camera,CAMERA_FIRST_PERSON);
     }
 
-    renderer.drawContent([&]()
-    {
-        BeginMode3D(camera);
-
-        //DrawSphereEx(config.light.position, 0.2f, 8, 8, config.light.color);
-        //DrawLine3D(config.light.position,config.light.target, config.light.color);
-        DrawGrid(1000,2.f);
+    auto draw = [&]() {
         for(auto& it : gameCtx.level.instances) {
             DrawModelEx(it->modelRef.model->model, it->position, Vector3{0,1,0},it->rotation, Vector3(1.f,1.f,1.f), WHITE);
         }
+    };
 
-        if (auto p = editorCtx.selectedModel.lock()) {
-            DrawBoundingBox(p->boundingBox(), RED );
-        }
+    Vector3 lightDir = Vector3Normalize((Vector3){ 0.35f, -1.0f, -0.35f });
+    Camera3D lightCamera = { 0 };
+    lightCamera.position = Vector3Scale(lightDir, -15.0f);
+    lightCamera.target = Vector3Zero();
+    lightCamera.projection = CAMERA_ORTHOGRAPHIC; // Use an orthographic projection for directional lights
+    lightCamera.up = (Vector3){ 0.0f, 1.0f, 0.0f };
+    lightCamera.fovy = 60.0f;
+    //PASS.1
+    BeginTextureMode(shader.shadowMap);
+    ClearBackground(WHITE);
 
+    BeginMode3D(lightCamera);
+        lightView = rlGetMatrixModelview();
+        lightProj = rlGetMatrixProjection();
+        draw();
+    EndMode3D();
+
+    EndTextureMode();
+    lightViewProj = MatrixMultiply(lightView, lightProj);
+
+    //PASS.2
+    renderer.drawContent([&]()
+    {
+        int lightVPLoc = GetShaderLocation(shader.shader, "lightVP");
+        int shadowMapLoc = GetShaderLocation(shader.shader, "shadowMap");
+
+        SetShaderValueMatrix(shader.shader, lightVPLoc, lightViewProj);
+        rlEnableShader(shader.shader.id);
+
+        rlActiveTextureSlot(textureActiveSlot);
+        rlEnableTexture(shader.shadowMap.depth.id);
+        rlSetUniform(shadowMapLoc, &textureActiveSlot, SHADER_UNIFORM_INT, 1);
+
+        BeginMode3D(camera);
+            draw();
+            //if (auto p = editorCtx.selectedModel.lock()) {
+            //    DrawBoundingBox(p->boundingBox(), RED );
+            //}
         EndMode3D();
         DrawFPS(10,10);
     });

@@ -4,15 +4,11 @@
 #include "configWindow.hpp"
 #include "windowManager.hpp"
 #include "gameWindow.hpp"
-#include "gameWindow.hpp"
 #include "profilerWindow.hpp"
 
-#define RLIGHTS_IMPLEMENTATION
 #include "configHelper.hpp"
 #include "editorContext.hpp"
-#include "rlights.hpp"
 #include "selectedWindow.hpp"
-#include "world.hpp"
 
 WindowManager*  WindowManager::instance = nullptr;
 Profiler*  Profiler::instance = nullptr;
