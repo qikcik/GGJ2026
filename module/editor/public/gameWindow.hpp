@@ -133,7 +133,22 @@ inline void GameWindow::onUpdate(float deltaTime) {
 
 
         if (auto p = editorCtx.selectedModel.lock()) {
-            if (counter < 0) {
+
+            if (IsKeyPressed(KEY_A))
+                counter = 0;
+            if (IsKeyPressed(KEY_D))
+                counter = 0;
+            if (IsKeyPressed(KEY_W))
+                counter = 0;
+            if (IsKeyPressed(KEY_S))
+                counter = 0;
+
+            if (IsKeyPressed(KEY_R))
+                counter = 0;
+            if (IsKeyPressed(KEY_F))
+                counter = 0;
+
+            if (counter <= 0) {
                 if (IsKeyDown(KEY_A))
                     p->position.x -= 0.25;
                 if (IsKeyDown(KEY_D))
@@ -147,7 +162,7 @@ inline void GameWindow::onUpdate(float deltaTime) {
                     p->position.y += 0.25;
                 if (IsKeyDown(KEY_F))
                     p->position.y -= 0.25;
-                counter = (1.f/GetFrameTime())/ (IsKeyDown(KEY_LEFT_SHIFT) ? 40.f : 5.f);
+                counter = (1.f/GetFrameTime())/ (IsKeyDown(KEY_LEFT_SHIFT) ? 40.f : 10.f);
             }
             counter--;
 
