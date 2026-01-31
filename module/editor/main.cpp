@@ -1,16 +1,18 @@
 #include <fstream>
 #include <raylib.h>
 
-#include "configWindow.hpp"
 #include "windowManager.hpp"
-#include "gameWindow.hpp"
+#include "public/windows/gameWindow.hpp"
 #include "profilerWindow.hpp"
 
 #include "configHelper.hpp"
 #include "editorContext.hpp"
 #include "selectedWindow.hpp"
+#include "actors/reactiveActor.hpp"
 #include "actors/staticActor.hpp"
 #include "actors/simpleAnimationActor.hpp"
+#include "windows/configWindow.hpp"
+#include "windows/tagsWindow.hpp"
 
 WindowManager*  WindowManager::instance = nullptr;
 Profiler*  Profiler::instance = nullptr;
@@ -30,6 +32,11 @@ int main(void)
         [](){return std::make_unique<SimpleAnimationActor>();}
     });
 
+    gameContext.actorFactory.entries.push_back({
+        ReactiveActor::ClassName,
+        [](){return std::make_unique<ReactiveActor>();}
+    });
+
     InitAudioDevice();
 
     ChangeDirectory("assets");
@@ -42,6 +49,7 @@ int main(void)
     WindowManager::get()->queueAddWindowView(std::make_unique<GameWindow>(gameContext,editorContext));
     WindowManager::get()->queueAddWindowView(std::make_unique<SelectedWindow>(gameContext,editorContext));
     WindowManager::get()->queueAddWindowView(std::make_unique<ConfigWindow>(gameContext.config));
+    WindowManager::get()->queueAddWindowView(std::make_unique<TagsWindow>(gameContext));
     //WindowManager::get()->queueAddWindowView(std::make_unique<ProfilerWindow>());
 
     WindowManager::get()->run(

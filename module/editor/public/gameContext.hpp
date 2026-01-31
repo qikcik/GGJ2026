@@ -13,6 +13,9 @@ public:
     World world;
     Level level;
 
+    std::vector<std::string> tags;
+
+
     ActorFactory actorFactory {};
 };
 
