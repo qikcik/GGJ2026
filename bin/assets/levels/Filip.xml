@@ -1,0 +1,29 @@
+<root>
+	<instances>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>2.500000</pos.x>
+			<pos.y>-0.750000</pos.y>
+			<pos.z>-1.750000</pos.z>
+			<position>
+				<x>2.500000</x>
+				<y>-0.750000</y>
+				<z>-1.750000</z>
+			</position>
+			<model>models\modular\Floor_Stone.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>6.000000</pos.x>
+			<pos.y>0.000001</pos.y>
+			<pos.z>-0.500000</pos.z>
+			<position>
+				<x>6.000000</x>
+				<y>0.000001</y>
+				<z>-0.500000</z>
+			</position>
+			<model>models\characters\character_Guard.vox</model>
+		</instance>
+	</instances>
+</root>
+
