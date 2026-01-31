@@ -1,0 +1,5 @@
+defineModule("CoreEditor")
+addModuleDependency("CoreEditor" "core")
+addDependency("CoreEditor" imgui)
+addDependency("CoreEditor" raylib)
+addDependency("CoreEditor" rlimgui)

@@ -1,0 +1,9 @@
+build
+Testing
+.cmake
+.ninja_deps
+.ninja_log
+.idea
+bin/*.exe
+bin/*GGJ2026*
+bin/imgui.ini
