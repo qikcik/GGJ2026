@@ -5,20 +5,20 @@
 	<camera_ortographic>true</camera_ortographic>
 	<light>
 		<ambient>
-			<r>0.042553</r>
-			<g>0.042553</g>
-			<b>0.042553</b>
+			<r>0.085106</r>
+			<g>0.056134</g>
+			<b>0.056134</b>
 			<a>0.000000</a>
 		</ambient>
 		<light>
-			<r>1.000000</r>
-			<g>1.000000</g>
+			<r>0.861702</r>
+			<g>0.880828</g>
 			<b>1.000000</b>
 			<a>0.000000</a>
 		</light>
-		<light.x>0.313678</light.x>
-		<light.y>-0.896221</light.y>
-		<light.z>-0.313678</light.z>
+		<light.x>0.200000</light.x>
+		<light.y>-0.800000</light.y>
+		<light.z>-0.350000</light.z>
 	</light>
 </config>
 
