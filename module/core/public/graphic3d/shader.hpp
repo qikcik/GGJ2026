@@ -17,12 +17,14 @@ public:
         SetShaderValue(shader, lightDirLoc, &lightDir, SHADER_UNIFORM_VEC3);
         SetShaderValue(shader, lightColLoc, &lightColorNormalized, SHADER_UNIFORM_VEC4);
         int ambientLoc = GetShaderLocation(shader, "ambient");
-        float ambient[4] = {0.1f, 0.1f, 0.1f, 1.0f};
+        float ambient[4] = {0.25f, 0.25f, 0.25f, 1.0f};
         SetShaderValue(shader, ambientLoc, ambient, SHADER_UNIFORM_VEC4);
         int shadowMapResolution = SHADOWMAP_RESOLUTION;
         SetShaderValue(shader, GetShaderLocation(shader, "shadowMapResolution"), &shadowMapResolution, SHADER_UNIFORM_INT);
 
         shadowMap = LoadShadowmapRenderTexture(SHADOWMAP_RESOLUTION, SHADOWMAP_RESOLUTION);
+        SetTextureFilter(shadowMap.depth, TEXTURE_FILTER_POINT);
+        SetTextureWrap(shadowMap.depth, TEXTURE_WRAP_CLAMP);
     }
 
     static RenderTexture2D LoadShadowmapRenderTexture(int width, int height)
@@ -44,7 +46,7 @@ public:
             target.depth.mipmaps = 1;
 
             rlFramebufferAttach(target.id, target.depth.id, RL_ATTACHMENT_DEPTH, RL_ATTACHMENT_TEXTURE2D, 0);
-
+            SetTextureFilter(target.depth, TEXTURE_FILTER_POINT);
             if (rlFramebufferComplete(target.id)) TRACELOG(LOG_INFO, "FBO: [ID %i] ShadowMap Framebuffer object created successfully", target.id);
             rlDisableFramebuffer();
         }
