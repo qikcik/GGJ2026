@@ -1,6 +1,24 @@
 <config>
-	<ambient>0.500000</ambient>
 	<camera_fov>25.000000</camera_fov>
+	<grid>false</grid>
+	<animationTime>0.250000</animationTime>
 	<camera_ortographic>true</camera_ortographic>
+	<light>
+		<ambient>
+			<r>0.042553</r>
+			<g>0.042553</g>
+			<b>0.042553</b>
+			<a>0.000000</a>
+		</ambient>
+		<light>
+			<r>1.000000</r>
+			<g>1.000000</g>
+			<b>1.000000</b>
+			<a>0.000000</a>
+		</light>
+		<light.x>0.313678</light.x>
+		<light.y>-0.896221</light.y>
+		<light.z>-0.313678</light.z>
+	</light>
 </config>
 

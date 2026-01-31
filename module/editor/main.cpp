@@ -30,10 +30,10 @@ int main(void)
         [](){return std::make_unique<SimpleAnimationActor>();}
     });
 
-    ConfigLoad("config",gameContext.config);
     InitAudioDevice();
 
     ChangeDirectory("assets");
+    ConfigLoad("config",gameContext.config);
 
     WindowManager::get()->properties.showImGuiShowcase    = false;
     WindowManager::get()->properties.showImGuiDebugInfo   = false;

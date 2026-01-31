@@ -40,7 +40,7 @@ void main()
     if (NdotL > 0.0)
     {
         vec3 halfwayDir = normalize(l + viewD);
-        specCo = pow(max(dot(normal, halfwayDir), 0.0), 16.0);
+        specCo = pow(max(dot(normal, halfwayDir), 0.0), 128.0);
     }
     vec3 specular = lightColor.rgb * specCo;
 

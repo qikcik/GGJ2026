@@ -31,12 +31,16 @@ public:
         SerializeGuiPreview preview;
         config.onSerialize(&preview);
 
+        ImGui::Separator();
+
         if(ImGui::Button("Save")) {
             ConfigSave("config",config);
         }
+        ImGui::SameLine();
         if(ImGui::Button("Load")) {
             ConfigLoad("config",config);
         }
+        ImGui::SameLine();
         if(ImGui::Button("Default")) {
             config = Config();
         }

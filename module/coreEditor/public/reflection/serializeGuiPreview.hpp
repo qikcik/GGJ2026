@@ -59,4 +59,9 @@ public:
         ImGui::Combo(inName.c_str(), &sel, items.data(), items.size());
         selected = options[sel];
     }
+
+    void propertyColor(std::string inName, float color[4]) override
+    {
+        ImGui::ColorPicker4(inName.c_str(), color);
+    }
 };

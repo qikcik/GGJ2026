@@ -94,6 +94,8 @@ inline void GameWindow::onUpdate(float deltaTime) {
     auto& config = gameCtx.config;
     auto& camera = gameCtx.config.edCamera;
 
+    shader.setLight(config.ambient,config.light,config.lightDir);
+
     Vector3 cameraPos = camera.position;
     SetShaderValue(shader.shader, shader.shader.locs[SHADER_LOC_VECTOR_VIEW], &cameraPos, SHADER_UNIFORM_VEC3);
 

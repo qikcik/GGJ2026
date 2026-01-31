@@ -1,4 +1,5 @@
 #pragma once
+#include "imgui.h"
 #include "raylib.h"
 #include "raymath.h"
 #include "rlgl.h"
@@ -9,22 +10,24 @@ public:
     void load() {
         shader = LoadShader(TextFormat("shaders/shadowmap.vs", 330),TextFormat("shaders/shadowmap.fs", 330));
 
-        Vector3 lightDir = Vector3Normalize((Vector3){ 0.35f, -1.0f, -0.35f });
-        Color lightColor = WHITE;
-        Vector4 lightColorNormalized = ColorNormalize(lightColor);
-        int lightDirLoc = GetShaderLocation(shader, "lightDir");
-        int lightColLoc = GetShaderLocation(shader, "lightColor");
-        SetShaderValue(shader, lightDirLoc, &lightDir, SHADER_UNIFORM_VEC3);
-        SetShaderValue(shader, lightColLoc, &lightColorNormalized, SHADER_UNIFORM_VEC4);
-        int ambientLoc = GetShaderLocation(shader, "ambient");
-        float ambient[4] = {0.25f, 0.25f, 0.25f, 1.0f};
-        SetShaderValue(shader, ambientLoc, ambient, SHADER_UNIFORM_VEC4);
         int shadowMapResolution = SHADOWMAP_RESOLUTION;
         SetShaderValue(shader, GetShaderLocation(shader, "shadowMapResolution"), &shadowMapResolution, SHADER_UNIFORM_INT);
 
         shadowMap = LoadShadowmapRenderTexture(SHADOWMAP_RESOLUTION, SHADOWMAP_RESOLUTION);
         SetTextureFilter(shadowMap.depth, TEXTURE_FILTER_POINT);
         SetTextureWrap(shadowMap.depth, TEXTURE_WRAP_CLAMP);
+    }
+
+    void setLight(float ambient[4] , float light[4], Vector3 dir)
+    {
+        Vector3 lightDir = Vector3Normalize(dir);
+        int lightDirLoc = GetShaderLocation(shader, "lightDir");
+        int lightColLoc = GetShaderLocation(shader, "lightColor");
+        int ambientLoc = GetShaderLocation(shader, "ambient");
+
+        SetShaderValue(shader, lightDirLoc, &lightDir, SHADER_UNIFORM_VEC3);
+        SetShaderValue(shader, lightColLoc, light, SHADER_UNIFORM_VEC4);
+        SetShaderValue(shader, ambientLoc, ambient, SHADER_UNIFORM_VEC4);
     }
 
     static RenderTexture2D LoadShadowmapRenderTexture(int width, int height)
