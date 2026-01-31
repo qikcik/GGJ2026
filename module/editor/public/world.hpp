@@ -36,6 +36,6 @@ public:
                 return {it};
             }
         }
-        return {models[0]};
+        return getModel("models/AAA.vox");
     };
 };

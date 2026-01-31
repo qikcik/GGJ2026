@@ -7,10 +7,22 @@
 #include "graphic3d/mesh.hpp"
 #include "graphic3d/meshInstance.hpp"
 
+struct DialogOption
+{
+    std::string label {};
+    std::string firstPlayerSentence {};
+    std::string response {};
+};
+
 struct ReactiveActorState
 {
     std::string requiredTag {"INVALID"};
     std::vector<QModelInstance> frames {1};
+
+    bool interactable = false;
+    std::string initialMsg {};
+    std::vector<DialogOption> dialogOptions {1};
+
 
     void onSerialize(ISerialize *inSerialize, GameContext &context) {
         inSerialize->propertyString("requiredTag",requiredTag);
@@ -29,6 +41,27 @@ struct ReactiveActorState
                 });
             }
         });
+
+        inSerialize->propertyBool("interactable",interactable);
+
+        if(interactable)
+        {
+            inSerialize->propertyString("initialMsg",initialMsg);
+            int num = dialogOptions.size();
+            inSerialize->propertyInt("optionsNum",num);
+            if (num<0) num = 0;
+            if ( dialogOptions.size() != num)
+                dialogOptions.resize(num);
+
+            inSerialize->propertyStruct("option",[&](ISerialize* inSerialize) {
+                for(int i = 0; i < num ; i++)
+                {
+                    inSerialize->propertyStruct(std::to_string(i),[&](ISerialize* inSerialize) {
+                        inSerialize->propertyString("label",dialogOptions[i].label);
+                    });
+                }
+            });
+        }
     }
 };
 
