@@ -24,8 +24,10 @@ public:
         return result;
     };
 
-    QModelRef getModel(const std::string& path)
+    QModelRef getModel(const std::string& inPath)
     {
+        std::string path = inPath;
+        std::replace(path.begin(), path.end(), '\\', '/');
         std::vector<std::string>  result;
         for (auto it : models)
         {

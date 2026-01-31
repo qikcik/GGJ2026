@@ -23,7 +23,9 @@ std::vector<std::string> loadFromFolder(std::string path)
     for (int idx = 0; idx != dir.count; idx++)
     {
         std::cout<< dir.paths[idx];
-        result.push_back( dir.paths[idx]);
+        std::string path = dir.paths[idx];
+        std::replace(path.begin(), path.end(), '\\', '/');
+        result.push_back( path);
     }
     UnloadDirectoryFiles(dir);
     return result;
@@ -212,7 +214,7 @@ inline void GameWindow::onUpdate(float deltaTime) {
 
     Vector3 lightDir = Vector3Normalize((Vector3){ 0.35f, -1.0f, -0.35f });
     Camera3D lightCamera = { 0 };
-    lightCamera.position = Vector3Scale(lightDir, -15.0f);
+    lightCamera.position = Vector3Scale(Vector3Normalize(config.lightDir), -15.0f);
     lightCamera.target = Vector3Zero();
     lightCamera.projection = CAMERA_ORTHOGRAPHIC; // Use an orthographic projection for directional lights
     lightCamera.up = (Vector3){ 0.0f, 1.0f, 0.0f };
