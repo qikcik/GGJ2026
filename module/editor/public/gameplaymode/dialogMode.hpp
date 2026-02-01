@@ -3,6 +3,7 @@
 #include "gameplayMode.hpp"
 #include "actors/playerActor.hpp"
 #include "../windows/gameWindow.hpp"
+#include "dialogMode2.hpp"
 
 class DialogMode : public GameplayMode
 {
@@ -32,7 +33,7 @@ public:
             if(options[selected].goToLevel != "")
                 goToLevel(ctx,options[selected].goToLevel);
 
-            goToPlayMode(ctx);
+            ctx.nextMode = std::make_shared<DialogMode2>(ctx,options[selected]);
         }
         if (selected <0) selected = 0;
         if (selected>=options.size()) selected=options.size()-1;
@@ -48,7 +49,7 @@ public:
         DrawRectangleLinesEx(text_box, 4, BLACK);
         DrawTextBoxed(GetFontDefault(),TextSubtext(c.initialMsg.c_str(),0,dialogCounter/(1.f/speed)),text_inner,24,1,true,BLACK);
 
-        if(dialogCounter/(1.f/speed) > c.initialMsg.size()) {
+        if(dialogCounter/(1.f/speed) >= c.initialMsg.size()) {
             for (int i = 0; i!= options.size(); i++) {
                 auto& option = options[i];
                 auto str = std::to_string(i+1) + "." + options[i].label;
@@ -59,7 +60,11 @@ public:
                 auto text_inner = (Rectangle){ ctx.size.x/2.f+8+selectedModifer, height+i*48.f+8, float(ctx.size.x/2-16), 24+8 };
                 DrawRectangleGradientV((int)text_box.x+2, (int)text_box.y+2, (int)text_box.width-4, (int)text_box.height-4, WHITE, WHITE);
                 DrawRectangleLinesEx(text_box, 4, BLACK);
-                DrawTextBoxed(GetFontDefault(),TextSubtext(options[i].label.c_str(),0,dialogCounter/(1.f/speed)),text_inner,24,1,true,BLACK);
+
+                if ( options[i].giveTag != "" || options[i].goToLevel != "")
+                    DrawTextBoxed(GetFontDefault(),TextSubtext(options[i].label.c_str(),0,dialogCounter/(1.f/speed)),text_inner,24,1,true,RED);
+                else
+                    DrawTextBoxed(GetFontDefault(),TextSubtext(options[i].label.c_str(),0,dialogCounter/(1.f/speed)),text_inner,24,1,true,BLACK);
 
             }
         }
