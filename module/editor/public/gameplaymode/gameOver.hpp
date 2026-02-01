@@ -3,7 +3,7 @@
 #include "gameplayMode.hpp"
 #include "actors/playerActor.hpp"
 #include "../windows/gameWindow.hpp"
-#include <ranges>
+
 class GameOver : public GameplayMode
 {
 public:
@@ -17,6 +17,11 @@ public:
 
         if (IsKeyPressed(KEY_SPACE)) {
 
+            // auto& tags = ctx.world.tags;
+            //
+            // std::erase_if(tags, [&](const std::string& s) {
+            //     return ! (s == ctx.config.preserveTag1 || s == ctx.config.preserveTag2 || s == ctx.config.preserveTag3);
+            //  });
 
 
             goToLevel(ctx,ctx.config.startingLevel);
