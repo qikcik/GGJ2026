@@ -226,9 +226,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-1.000000</pos.x>
+			<pos.x>-5.000000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>-24.000000</pos.z>
+			<pos.z>-25.000000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -254,9 +254,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-14.750000</pos.x>
+			<pos.x>-1.000000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>-16.000000</pos.z>
+			<pos.z>-14.250000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -408,9 +408,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-9.250000</pos.x>
+			<pos.x>14.750000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>-20.000000</pos.z>
+			<pos.z>-3.750000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -422,9 +422,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-13.750000</pos.x>
+			<pos.x>15.000000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>-22.250000</pos.z>
+			<pos.z>6.750000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -464,23 +464,23 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-14.500000</pos.x>
+			<pos.x>-0.750000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-19.500000</pos.z>
+			<pos.z>-19.250000</pos.z>
 			<model>models/props/table.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-14.500000</pos.x>
+			<pos.x>-0.750000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-9.750000</pos.z>
+			<pos.z>-10.750000</pos.z>
 			<model>models/props/table.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-14.500000</pos.x>
+			<pos.x>0.500000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>1.500000</pos.z>
+			<pos.z>1.750000</pos.z>
 			<model>models/props/table.vox</model>
 		</instance>
 		<instance>
@@ -513,9 +513,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-14.500000</pos.x>
+			<pos.x>-0.500000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>-4.250000</pos.z>
+			<pos.z>-5.750000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -555,7 +555,7 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-9.750000</pos.x>
+			<pos.x>2.500000</pos.x>
 			<pos.y>1.000000</pos.y>
 			<pos.z>0.250000</pos.z>
 			<timeModifier>1.000000</timeModifier>
@@ -567,6 +567,102 @@
 				<model>models/characters/character_Guest_01_Red_crouch.vox</model>
 			</frame2>
 		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-22.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-23.500000</pos.z>
+			<model>models/modular/bar.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-18.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-23.250000</pos.z>
+			<model>models/modular/bar_conrner_02.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-19.500000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-15.750000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-12.000000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-8.250000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-18.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-0.750000</pos.z>
+			<model>models/modular/bar_conrner_01.vox</model>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-18.000000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-11.500000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Worker_Blue.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Worker_Blue_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-4.500000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
 	</instances>
+	<light>
+		<ambient>
+			<r>0.759615</r>
+			<g>0.533192</g>
+			<b>0.533192</b>
+			<a>0.000000</a>
+		</ambient>
+		<light>
+			<r>0.826923</r>
+			<g>0.532729</g>
+			<b>0.532729</b>
+			<a>0.000000</a>
+		</light>
+		<light.x>0.313678</light.x>
+		<light.y>-0.896221</light.y>
+		<light.z>-0.313678</light.z>
+	</light>
+	<camera>
+		<position.x>25.000000</position.x>
+		<position.y>25.000000</position.y>
+		<position.z>50.000000</position.z>
+		<target.x>4.775684</target.x>
+		<target.y>4.258984</target.y>
+		<target.z>-3.951721</target.z>
+		<fovy>30.000000</fovy>
+	</camera>
 </root>
 
