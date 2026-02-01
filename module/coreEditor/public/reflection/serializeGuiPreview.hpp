@@ -75,7 +75,7 @@ public:
             for (int i = 0; i < items.size(); i++) {
                 // Logika filtrowania (case-insensitive wymagałoby dodatkowej funkcji)
                 if (strlen(filter) > 0 && strstr(items[i], filter) == nullptr) {
-                    continue;
+                    continue ;
                 }
 
                 const bool is_selected = (selected_idx == i);
