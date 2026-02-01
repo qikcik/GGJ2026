@@ -206,23 +206,9 @@
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-20.000000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-20.000000</pos.z>
-			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
 			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>19.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>20.500000</pos.z>
-			<model>models/modular/wall_Corner_Down_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
@@ -317,13 +303,6 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.750000</pos.z>
-			<model>models/modular/wall_Corner_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
 			<pos.x>-10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
@@ -333,8 +312,8 @@
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-10.000000</pos.z>
-			<model>models/modular/wall_90_Brick.vox</model>
+			<pos.z>-20.000000</pos.z>
+			<model>models/modular/wall_Brick_Bar.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
@@ -349,13 +328,6 @@
 			<pos.y>0.500000</pos.y>
 			<pos.z>10.000000</pos.z>
 			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>20.750000</pos.z>
-			<model>models/modular/wall_Corner_Left_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
@@ -636,6 +608,55 @@
 			<pos.y>0.500000</pos.y>
 			<pos.z>-4.500000</pos.z>
 			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-10.000000</pos.z>
+			<model>models/modular/wall_Brick_Bar.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-19.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-30.000000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>20.000000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-19.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>29.250000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>28.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>20.250000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>20.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>29.250000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 	</instances>
 	<light>
