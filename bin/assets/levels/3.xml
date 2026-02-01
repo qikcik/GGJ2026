@@ -186,7 +186,7 @@
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-2.500000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>5.000000</pos.z>
+			<pos.z>0.000000</pos.z>
 			<model>models/props/trashcan.vox</model>
 		</instance>
 	</instances>
