@@ -208,7 +208,6 @@
 			<pos.x>3.750000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>-9.750000</pos.z>
-			<model>models/characters/character_Main.vox</model>
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
@@ -336,7 +335,7 @@
 							<message>puf</message>
 							<exitMessage>close</exitMessage>
 							<requiredTag/>
-							<giveTag>killred</giveTag>
+							<giveTag>killred, maskred</giveTag>
 							<goToLevel/>
 							<giveGameover>false</giveGameover>
 						</0>
@@ -385,18 +384,27 @@
 						</0>
 					</frames>
 					<interactable>true</interactable>
-					<initialMsg>To wejscie tylko dla VIpów</initialMsg>
-					<optionsNum>1</optionsNum>
+					<initialMsg>To wejscie dla VIPów</initialMsg>
+					<optionsNum>2</optionsNum>
 					<option>
 						<0>
-							<label>mam czerwona maske</label>
-							<message>dobrze wchodz</message>
-							<exitMessage>okej</exitMessage>
-							<requiredTag>maskred</requiredTag>
+							<label>Mam czerwona maske</label>
+							<message>A tak widze zapraszamy</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
 							<giveTag/>
 							<goToLevel>4</goToLevel>
 							<giveGameover>false</giveGameover>
 						</0>
+						<1>
+							<label>Odejdz</label>
+							<message>Nie przychodz tu wiecej</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+							<giveGameover>false</giveGameover>
+						</1>
 					</option>
 				</0>
 			</states>
