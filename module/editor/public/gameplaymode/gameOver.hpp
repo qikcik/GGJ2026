@@ -3,7 +3,7 @@
 #include "gameplayMode.hpp"
 #include "actors/playerActor.hpp"
 #include "../windows/gameWindow.hpp"
-
+#include <ranges>
 class GameOver : public GameplayMode
 {
 public:
@@ -17,11 +17,7 @@ public:
 
         if (IsKeyPressed(KEY_SPACE)) {
 
-            ctx.world.tags =  ctx.world.tags
-                | std::views::filter([](const auto& s) {
-                    return s == "maskblue" || s == "maskyellow" || s == "maskred";
-                })
-                | std::ranges::to<std::vector>();
+
 
             goToLevel(ctx,ctx.config.startingLevel);
             goToPlayMode(ctx);

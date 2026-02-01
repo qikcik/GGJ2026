@@ -85,20 +85,6 @@
 			<model>models/modular/wall_Door_Brick.vox</model>
 		</instance>
 		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>2.250000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>15.000000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Main.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Main_crouch.vox</model>
-			</frame2>
-		</instance>
-		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-1.000000</pos.x>
 			<pos.y>0.500000</pos.y>
@@ -230,6 +216,13 @@
 			<pos.y>0.500000</pos.y>
 			<pos.z>-5.750000</pos.z>
 			<model>models/props/table_NoDrinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>PlayerActor</TYPE>
+			<pos.x>1.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>13.750000</pos.z>
+			<model>models/characters/character_Main.vox</model>
 		</instance>
 	</instances>
 	<light>

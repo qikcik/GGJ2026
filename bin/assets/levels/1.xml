@@ -618,6 +618,7 @@
 							<requiredTag/>
 							<giveTag>aboutmask</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Zagroz bronia</label>
@@ -626,6 +627,7 @@
 							<requiredTag/>
 							<giveTag>angry</giveTag>
 							<goToLevel/>
+							<giveGameover>true</giveGameover>
 						</1>
 						<2>
 							<label>Nalegaj na wejscie</label>
@@ -634,6 +636,7 @@
 							<requiredTag/>
 							<giveTag>angry</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</2>
 						<3>
 							<label>Mam maske</label>
@@ -642,6 +645,7 @@
 							<requiredTag>maskyellow</requiredTag>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</3>
 					</option>
 				</0>
@@ -668,6 +672,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 					</option>
 				</1>
@@ -708,6 +713,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel>2</goToLevel>
+							<giveGameover>false</giveGameover>
 						</0>
 					</option>
 				</3>
@@ -743,6 +749,7 @@
 							<requiredTag/>
 							<giveTag>maskyellow</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Odejdz</label>
@@ -751,6 +758,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</0>
@@ -800,6 +808,7 @@
 							<requiredTag>aboutmask</requiredTag>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Pomoz przemycic mi bron</label>
@@ -808,6 +817,7 @@
 							<requiredTag/>
 							<giveTag>pistol_out</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 						<2>
 							<label>Odejdz</label>
@@ -816,6 +826,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</2>
 					</option>
 				</0>

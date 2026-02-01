@@ -359,6 +359,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Ooo niebiaska maska</label>
@@ -367,6 +368,7 @@
 							<requiredTag>maskblue</requiredTag>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</0>
@@ -390,6 +392,7 @@
 							<requiredTag/>
 							<giveTag>maskblue</giveTag>
 							<goToLevel/>
+							<giveGameover>true</giveGameover>
 						</0>
 					</option>
 				</1>
@@ -443,6 +446,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Czerwona maska widze</label>
@@ -451,6 +455,7 @@
 							<requiredTag>maskred</requiredTag>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</0>
@@ -497,6 +502,7 @@
 							<requiredTag/>
 							<giveTag>table turnoff</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 					</option>
 				</0>
@@ -551,6 +557,7 @@
 							<requiredTag/>
 							<giveTag>shooting</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>odejdz</label>
@@ -559,6 +566,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</1>
@@ -582,6 +590,7 @@
 							<requiredTag>beforshoting</requiredTag>
 							<giveTag>shooting</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 					</option>
 				</2>
@@ -614,6 +623,7 @@
 							<requiredTag/>
 							<giveTag>table turnoff</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Opusc</label>
@@ -622,6 +632,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</0>
@@ -645,6 +656,7 @@
 							<requiredTag>table turnoff</requiredTag>
 							<giveTag>beforeshooting</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Opusc</label>
@@ -653,6 +665,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</1>
@@ -676,6 +689,7 @@
 							<requiredTag>beforeshooting</requiredTag>
 							<giveTag>shooting</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Opusc</label>
@@ -684,6 +698,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</2>
@@ -719,6 +734,7 @@
 							<requiredTag/>
 							<giveTag>table turnoff</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 					</option>
 				</0>
@@ -745,6 +761,7 @@
 							<requiredTag/>
 							<giveTag>beforshooting</giveTag>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 					</option>
 				</1>
@@ -780,6 +797,7 @@
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
+							<giveGameover>false</giveGameover>
 						</0>
 						<1>
 							<label>Jestem pracownikiem przepusc mnie</label>
@@ -787,7 +805,8 @@
 							<exitMessage>close</exitMessage>
 							<requiredTag>maskblue</requiredTag>
 							<giveTag/>
-							<goToLevel/>
+							<goToLevel>3</goToLevel>
+							<giveGameover>false</giveGameover>
 						</1>
 					</option>
 				</0>
