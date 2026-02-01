@@ -593,7 +593,7 @@
 			<pos.x>-6.000000</pos.x>
 			<pos.y>1.250000</pos.y>
 			<pos.z>-19.750000</pos.z>
-			<statesNum>3</statesNum>
+			<statesNum>4</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
@@ -641,7 +641,7 @@
 							<exitMessage>close</exitMessage>
 							<requiredTag>maskyellow</requiredTag>
 							<giveTag/>
-							<goToLevel>2</goToLevel>
+							<goToLevel/>
 						</3>
 					</option>
 				</0>
@@ -685,6 +685,32 @@
 					</frames>
 					<interactable>false</interactable>
 				</2>
+				<3>
+					<requiredTag>pistol_out</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guard_crouch.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guard.vox</model>
+						</1>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg/>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>Wchodz</label>
+							<message>Dobra</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel>2</goToLevel>
+						</0>
+					</option>
+				</3>
 			</states>
 		</instance>
 		<instance>
@@ -769,7 +795,7 @@
 					<option>
 						<0>
 							<label>Opowiedz mi o tych maskach</label>
-							<message/>
+							<message>Za zielonymi maskami kryja sie goscie, za niebieskimi pracownicy, a za czerwonymi VIPy</message>
 							<exitMessage>close</exitMessage>
 							<requiredTag>aboutmask</requiredTag>
 							<giveTag/>
@@ -777,7 +803,7 @@
 						</0>
 						<1>
 							<label>Pomoz przemycic mi bron</label>
-							<message/>
+							<message>Jasne zostawie ja w koszu na smieci w srodku</message>
 							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>pistol_out</giveTag>
@@ -1095,6 +1121,69 @@
 			<pos.y>0.750000</pos.y>
 			<pos.z>-10.750000</pos.z>
 			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-13.250000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>29.750000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-19.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>30.000000</pos.z>
+			<model>models/modular/Floor_Stone.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-29.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>20.000000</pos.z>
+			<model>models/modular/Floor_Stone.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-29.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>30.000000</pos.z>
+			<model>models/modular/Floor_Stone.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-13.250000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-8.000000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-2.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>2.500000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>29.750000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>2.500000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
 		</instance>
 	</instances>
 	<light>
