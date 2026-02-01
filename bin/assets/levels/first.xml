@@ -883,7 +883,7 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-13.000000</pos.x>
+			<pos.x>0.500000</pos.x>
 			<pos.y>0.750000</pos.y>
 			<pos.z>-7.250000</pos.z>
 			<model>models/props/car.vox</model>
@@ -1062,6 +1062,13 @@
 			<pos.y>0.000000</pos.y>
 			<pos.z>29.750000</pos.z>
 			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-2.750000</pos.x>
+			<pos.y>1.500000</pos.y>
+			<pos.z>-24.750000</pos.z>
+			<model>models/props/sign_Bar.vox</model>
 		</instance>
 	</instances>
 	<light>
