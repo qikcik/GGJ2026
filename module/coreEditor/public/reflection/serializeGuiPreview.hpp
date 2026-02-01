@@ -81,6 +81,7 @@ public:
                 const bool is_selected = (selected_idx == i);
                 if (ImGui::Selectable(items[i], is_selected)) {
                     selected_idx = i;
+                    selected = options[selected_idx];
                 }
 
                 if (is_selected) {

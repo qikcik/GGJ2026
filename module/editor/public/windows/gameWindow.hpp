@@ -87,6 +87,7 @@ protected:
     Texture2D viewportTexture;
     GameContext gameCtx;
     int counter = 0;
+    float fadeCounter = 0.f;
 
     Matrix lightView = { 0 };
     Matrix lightProj = { 0 };
@@ -95,7 +96,7 @@ protected:
 };
 
 inline void GameWindow::onUpdate(float deltaTime) {
-
+    fadeCounter += deltaTime;
     if (gameCtx.nextMode) {
         gameCtx.mode = gameCtx.nextMode;
         gameCtx.nextMode = {};
@@ -177,6 +178,10 @@ inline void GameWindow::onUpdate(float deltaTime) {
             }
         EndMode3D();
         gameCtx.mode->onDraw2D();
+
+        if (fadeCounter < 1.0f) {
+            DrawRectangle(0, 0, size.x, size.y, Fade(BLACK, 1.f-fadeCounter));
+        }
 
         DrawFPS(10,10);
     });

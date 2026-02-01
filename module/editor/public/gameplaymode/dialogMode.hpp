@@ -30,8 +30,6 @@ public:
         if (IsKeyPressed(KEY_SPACE)) {
             if(options[selected].giveTag != "")
                 ctx.world.tags.push_back(options[selected].giveTag);
-            if(options[selected].goToLevel != "")
-                goToLevel(ctx,options[selected].goToLevel);
 
             ctx.nextMode = std::make_shared<DialogMode2>(ctx,options[selected]);
         }
