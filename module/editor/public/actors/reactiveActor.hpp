@@ -26,6 +26,7 @@ struct DialogOption
 struct ReactiveActorState
 {
     std::string requiredTag {"INVALID"};
+    float timeModifier {1};
     std::vector<QModelInstance> frames {1};
 
     bool interactable = false;
@@ -35,7 +36,7 @@ struct ReactiveActorState
 
     void onSerialize(ISerialize *inSerialize, GameContext &context) {
         inSerialize->propertyString("requiredTag",requiredTag);
-
+        inSerialize->propertyFloat("timeModifier",timeModifier);
         int num = frames.size();
         inSerialize->propertyInt("framesNum",num);
         if (num<1) num = 1;
@@ -96,6 +97,7 @@ public:
 
     void onUpdate(GameContext &ctx) override
     {
+        int prevState = state;
         if (state >= states.size())
             state = 0;
 
@@ -110,14 +112,29 @@ public:
             }
         }
         if (!assigned) state = 0;
+
+        if (prevState!= state)
+            frame =0;
+
+        time -= ctx.deltaTime;
+
+        if (time <= 0.0f) {
+            time = ctx.config.animationTime * states[state].timeModifier;
+            frame+=1;
+        }
+
+        if (frame >= states[state].frames.size())
+            frame = 0;
     }
     void onDraw(GameContext &) override {
         auto& model = states[state].frames[frame];
-        model.position = pos;
+        states[state].frames[frame].position = pos;
         DrawModelEx(model.modelRef.model->model, model.position, Vector3{0,1,0},0, Vector3(1.f,1.f,1.f), WHITE);
+
     }
 
     BoundingBox getBoundingBox() override {
+        states[state].frames[frame].position = pos;
         return states[state].frames[frame].boundingBox();
     }
 
@@ -145,6 +162,6 @@ public:
 
     int state = 0;
     int frame = 0;
-    int time =  0;
+    float time =  0;
     std::vector<ReactiveActorState> states {1};
 };

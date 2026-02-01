@@ -40,7 +40,7 @@ public:
 
     void onImGuiDraw() override
     {
-        ImGui::Separator();
+        ImGui::SeparatorText("Level load/save");
 
         SerializeGuiPreview preview;
         preview.propertyString("level_name",level_name);
@@ -58,7 +58,7 @@ public:
             WindowManager::get()->queueAddWindowView(std::make_unique<GameWindow>(gameCtx,level_name));
         }
 
-        ImGui::Separator();
+        ImGui::SeparatorText("Spawn new actor");
         auto names = gameCtx.world.actorFactory.getNames();
         ImGui::Combo("Actor to", &editorCtx.selectedActorFactoryEntry, names.data(), names.size()); ImGui::SameLine();
         if(ImGui::Button("Add"))
@@ -68,7 +68,7 @@ public:
             gameCtx.level.actors.push_back(std::move(actor));
         }
 
-        ImGui::Separator();
+        ImGui::SeparatorText("Selected Actor");
 
         if(auto p = editorCtx.selectedModel.lock())
         {

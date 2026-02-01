@@ -29,10 +29,12 @@ public:
     void onImGuiDraw() override
     {
         SerializeGuiPreview preview;
+        ImGui::SeparatorText("config");
         config.onSerialize(&preview);
 
         ImGui::Separator();
 
+        ImGui::SeparatorText("config action");
         if(ImGui::Button("Save")) {
             ConfigSave("config",config);
         }

@@ -30,6 +30,7 @@ public:
     void onImGuiDraw() override {
         SerializeGuiPreview inSerialize;
 
+        ImGui::SeparatorText("Tags");
         int tagNum = ctx.world.tags.size();
         inSerialize.propertyInt("num",tagNum);
         if (tagNum<0) tagNum = 0;
@@ -43,13 +44,13 @@ public:
 
         ImGui::SeparatorText("Level Settings");
         ctx.level.onSerialize(&inSerialize);
-        ImGui::SeparatorText("actions");
-        if (ImGui::Button("Save Current Camera")) {
+        ImGui::SeparatorText("Level Actions");
+        if (ImGui::Button("EditorCamera to LevelCamera")) {
             ctx.level.cameraPosition = ctx.config.edCamera.position;
             ctx.level.cameraTarget = ctx.config.edCamera.target;
             ctx.level.fovy = ctx.config.edCamera.fovy;
         }
-        if (ImGui::Button("Set Game Camera")) {
+        if (ImGui::Button("LevelCamera to EditorCamera")) {
             ctx.config.edCamera.position = ctx.level.cameraPosition;
             ctx.config.edCamera.target = ctx.level.cameraTarget;
             ctx.config.edCamera.fovy = ctx.level.fovy;
