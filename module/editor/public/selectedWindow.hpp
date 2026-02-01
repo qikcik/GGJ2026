@@ -10,6 +10,7 @@
 #include "world.hpp"
 #include "graphic3d/meshInstance.hpp"
 #include "reflection/serializeGuiPreview.hpp"
+#include "windows/gameWindow.hpp"
 
 class EditorContext;
 class World;
@@ -51,13 +52,18 @@ public:
         if(ImGui::Button("Load")) {
             gameCtx.level.loadFromFile(level_name,gameCtx);
         }
+        ImGui::SameLine();
+        if(ImGui::Button("Start")) {
+            //gameCtx.level.saveToFile(level_name,gameCtx);
+            WindowManager::get()->queueAddWindowView(std::make_unique<GameWindow>(gameCtx,level_name));
+        }
 
         ImGui::Separator();
-        auto names = gameCtx.actorFactory.getNames();
+        auto names = gameCtx.world.actorFactory.getNames();
         ImGui::Combo("Actor to", &editorCtx.selectedActorFactoryEntry, names.data(), names.size()); ImGui::SameLine();
         if(ImGui::Button("Add"))
         {
-            auto actor = gameCtx.actorFactory.entries[editorCtx.selectedActorFactoryEntry].construct();
+            auto actor = gameCtx.world.actorFactory.entries[editorCtx.selectedActorFactoryEntry].construct();
             actor->onPlaced(gameCtx);
             gameCtx.level.actors.push_back(std::move(actor));
         }

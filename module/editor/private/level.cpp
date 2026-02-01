@@ -53,7 +53,7 @@ void Level::loadFromFile(std::string name,GameContext& ctx)
                 std::string typeName;
                 inSerialize->propertyString("TYPE",typeName);
 
-                auto entry = ctx.actorFactory.getByClassName(typeName);
+                auto entry = ctx.world.actorFactory.getByClassName(typeName);
                 if(!entry) return;
 
                 auto qmodel = std::make_shared<QModelInstance>();

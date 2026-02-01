@@ -15,6 +15,11 @@ public:
     void queueAddWindowView(std::unique_ptr<Window> inView)
     {
         if(!inView) return;
+        for(auto& it : windowViews) {
+            if (it->getTitle() == inView->getTitle()) {
+                it->pendingDestroy = true;
+            }
+        }
         queuedWindowViews.push_back(std::move(inView));
     }
 

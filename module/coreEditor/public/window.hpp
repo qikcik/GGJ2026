@@ -18,6 +18,7 @@ public:
 
     bool isPendingDestroy() const {return pendingDestroy;};
     bool isFocused() const {return focused;};
+    std::string getTitle() const {return title;};
 
     void ImGuiDraw()
     {
@@ -52,6 +53,7 @@ public:
     }
 
 protected:
+    friend class WindowManager;
     bool pendingDestroy = false;
     bool focused {false};
     Vec2i size {640,480};

@@ -13,6 +13,8 @@ class World
 public:
     std::vector<std::shared_ptr<QModel>> models {};
     QShader shader {};
+    ActorFactory actorFactory {};
+    std::vector<std::string> tags;
 
     std::vector<std::string> modelNames()
     {

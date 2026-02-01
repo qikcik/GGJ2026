@@ -15,7 +15,7 @@ inline std::unique_ptr<ActorBase> duplicateActor(ActorBase* actor,GameContext& c
     SerializeXMLWriter serializer{&root,node};
     actor->onSerialize(&serializer,context);
 
-    auto fac = context.actorFactory.getByClassName(actor->getClassName());
+    auto fac = context.world.actorFactory.getByClassName(actor->getClassName());
     if (!fac) return {};
 
     std::unique_ptr<ActorBase> out = fac->construct();

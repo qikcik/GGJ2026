@@ -31,15 +31,15 @@ public:
     {
         SerializeGuiPreview inSerialize;
 
-        int tagNum = ctx.tags.size();
+        int tagNum = ctx.world.tags.size();
         inSerialize.propertyInt("num",tagNum);
         if (tagNum<0) tagNum = 0;
-        if ( ctx.tags.size() != tagNum)
-             ctx.tags.resize(tagNum);
+        if ( ctx.world.tags.size() != tagNum)
+             ctx.world.tags.resize(tagNum);
 
         for(int i = 0; i < tagNum ; i++)
         {
-            inSerialize.propertyString(std::to_string(i+1),ctx.tags[i]);
+            inSerialize.propertyString(std::to_string(i+1),ctx.world.tags[i]);
         }
     }
 

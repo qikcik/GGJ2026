@@ -8,14 +8,11 @@ class QModelInstance;
 
 class GameContext {
 public:
+    Config& config;
+    World& world;
     float deltaTime = 1.f/60;
-    Config config;
-    World world;
-    Level level;
-
-    std::vector<std::string> tags;
+    Level level {};
 
 
-    ActorFactory actorFactory {};
 };
 

@@ -7,11 +7,20 @@
 #include "graphic3d/mesh.hpp"
 #include "graphic3d/meshInstance.hpp"
 
+
 struct DialogOption
 {
     std::string label {};
-    std::string firstPlayerSentence {};
-    std::string response {};
+    std::string requiredTag {};
+
+    std::string giveTag {};
+    std::string goToLevel {};
+
+    bool canPreform(GameContext &ctx) {
+        if (!giveTag.empty() && std::ranges::contains(ctx.world.tags, giveTag)) return false;
+        if (requiredTag.empty()) return true;
+        return std::ranges::contains(ctx.world.tags, requiredTag);
+    }
 };
 
 struct ReactiveActorState
@@ -58,6 +67,9 @@ struct ReactiveActorState
                 {
                     inSerialize->propertyStruct(std::to_string(i),[&](ISerialize* inSerialize) {
                         inSerialize->propertyString("label",dialogOptions[i].label);
+                        inSerialize->propertyString("requiredTag",dialogOptions[i].requiredTag);
+                        inSerialize->propertyString("giveTag",dialogOptions[i].giveTag);
+                        inSerialize->propertyString("goToLevel",dialogOptions[i].goToLevel);
                     });
                 }
             });
@@ -91,7 +103,7 @@ public:
         for (int stateIdx = states.size() - 1; stateIdx >= 0; --stateIdx)
         {
             auto& stateIt = states[stateIdx];
-            if (std::ranges::contains(ctx.tags, stateIt.requiredTag)) {
+            if (std::ranges::contains(ctx.world.tags, stateIt.requiredTag)) {
                 state = stateIdx;
                 assigned = true;
                 break;
