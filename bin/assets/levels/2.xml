@@ -102,7 +102,7 @@
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
-			<pos.z>10.000000</pos.z>
+			<pos.z>20.000000</pos.z>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -172,7 +172,7 @@
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
-			<pos.z>20.000000</pos.z>
+			<pos.z>10.000000</pos.z>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -292,20 +292,6 @@
 			</frame1>
 			<frame2>
 				<model>models/characters/character_Guest_Woman_Fight_01.vox</model>
-			</frame2>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-15.000000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>1.250000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Worker_Blue.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Worker_Blue_crouch.vox</model>
 			</frame2>
 		</instance>
 		<instance>
@@ -443,9 +429,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-7.750000</pos.x>
+			<pos.x>-3.750000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>12.750000</pos.z>
+			<pos.z>4.750000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -580,6 +566,36 @@
 			<frame2>
 				<model>models/characters/character_Guest_03_Green_crouch.vox</model>
 			</frame2>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>-16.000000</pos.x>
+			<pos.y>2.250000</pos.y>
+			<pos.z>1.500000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Worker_Blue.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guest_02_Green_crouch.vox</model>
+						</1>
+					</frames>
+				</0>
+				<1>
+					<requiredTag>bluemask</requiredTag>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Worker_Blue_Dead_NoMask.vox</model>
+						</0>
+					</frames>
+				</1>
+			</states>
 		</instance>
 	</instances>
 </root>
