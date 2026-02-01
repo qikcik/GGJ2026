@@ -72,7 +72,7 @@ inline void EditorWindow::onUpdate(float deltaTime) {
     auto& config = gameCtx.config;
     auto& camera = gameCtx.config.edCamera;
 
-    shader.setLight(config.ambient,config.light,config.lightDir);
+    shader.setLight(level.ambient,level.light,level.lightDir);
 
     Vector3 cameraPos = camera.position;
     SetShaderValue(shader.shader, shader.shader.locs[SHADER_LOC_VECTOR_VIEW], &cameraPos, SHADER_UNIFORM_VEC3);
@@ -190,7 +190,7 @@ inline void EditorWindow::onUpdate(float deltaTime) {
 
     Vector3 lightDir = Vector3Normalize((Vector3){ 0.35f, -1.0f, -0.35f });
     Camera3D lightCamera = { 0 };
-    lightCamera.position = Vector3Scale(Vector3Normalize(config.lightDir), -15.0f);
+    lightCamera.position = Vector3Scale(Vector3Normalize(level.lightDir), -15.0f);
     lightCamera.target = Vector3Zero();
     lightCamera.projection = CAMERA_ORTHOGRAPHIC; // Use an orthographic projection for directional lights
     lightCamera.up = (Vector3){ 0.0f, 1.0f, 0.0f };

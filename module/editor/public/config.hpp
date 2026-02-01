@@ -13,10 +13,6 @@ public:
     std::string test;
     bool grid = false;
 
-    float ambient[4] = {};
-    float light[4] = {};
-    Vector3 lightDir = Vector3Normalize((Vector3){ 0.35f, -1.0f, -0.35f });;
-
     Config() {
         edCamera.position = (Vector3){ 25, 25.0f, 50 };
         edCamera.target = (Vector3){ 0.0f, 0.0f, 0.0f };
@@ -33,15 +29,5 @@ public:
         bool value = edCamera.projection == CAMERA_ORTHOGRAPHIC;
         inSerialize->propertyBool("camera_ortographic",value);
         edCamera.projection = value ? CAMERA_ORTHOGRAPHIC : CAMERA_PERSPECTIVE;
-
-        inSerialize->propertyStruct("light",[&](ISerialize* inSerialize) {
-            inSerialize->propertyColor("ambient",ambient);
-            inSerialize->propertyColor("light",light);
-            inSerialize->propertyFloat("light.x",lightDir.x);
-            inSerialize->propertyFloat("light.y",lightDir.y);
-            inSerialize->propertyFloat("light.z",lightDir.z);
-        });
-
-
     }
 };

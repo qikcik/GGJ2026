@@ -29,6 +29,7 @@ void Level::saveToFile(std::string name,GameContext& ctx)
             });
         }
     });
+    onSerialize(&serializer);
 
 
     std::ofstream out("levels/"+name+".xml");
@@ -63,6 +64,7 @@ void Level::loadFromFile(std::string name,GameContext& ctx)
                 actors.push_back(std::move(actor));
             });
         });
+        onSerialize(inSerialize);
     });
 
     root.clear();

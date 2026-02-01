@@ -46,6 +46,11 @@ public:
         auto& world = gameCtx.world;
         auto& level = gameCtx.level;
         auto& shader = gameCtx.world.shader;
+        auto& config = gameCtx.config;
+
+        config.edCamera.position = level.cameraPosition;
+        config.edCamera.target = level.cameraTarget;
+        config.edCamera.fovy = level.fovy;
 
         renderer.changeSize({512, 512});
 
@@ -103,7 +108,7 @@ inline void GameWindow::onUpdate(float deltaTime) {
     auto& config = gameCtx.config;
     auto& camera = gameCtx.config.edCamera;
 
-    shader.setLight(config.ambient,config.light,config.lightDir);
+    shader.setLight(level.ambient,level.light,level.lightDir);
 
     Vector3 cameraPos = camera.position;
     SetShaderValue(shader.shader, shader.shader.locs[SHADER_LOC_VECTOR_VIEW], &cameraPos, SHADER_UNIFORM_VEC3);
@@ -130,18 +135,20 @@ inline void GameWindow::onUpdate(float deltaTime) {
             auto playerBox = player->getBoundingBox();
             std::shared_ptr<ReactiveActor> other {};
             for (auto it : interactable) {
-                if ( it->states[it->state].interactable && CheckCollisionBoxes(playerBox,it->getBoundingBox()))
+                if ( CheckCollisionBoxes(playerBox,it->getBoundingBox()))
                     other = it;
             }
 
             if(other) {
                 player->pos = prevPos;
-                interactWith = other;
-                options.clear();
-                for (auto it : interactWith->states[interactWith->state].dialogOptions)
-                    if (it.canPreform(gameCtx))
-                        options.push_back(it);
-                mode = Mode::Dialog;
+                if (other->states[other->state].interactable) {
+                    interactWith = other;
+                    options.clear();
+                    for (auto it : interactWith->states[interactWith->state].dialogOptions)
+                        if (it.canPreform(gameCtx))
+                            options.push_back(it);
+                    mode = Mode::Dialog;
+                }
             }
 
             counter = (1.f/gameCtx.deltaTime) / 30.f;
@@ -192,7 +199,7 @@ inline void GameWindow::onUpdate(float deltaTime) {
 
     Vector3 lightDir = Vector3Normalize((Vector3){ 0.35f, -1.0f, -0.35f });
     Camera3D lightCamera = { 0 };
-    lightCamera.position = Vector3Scale(Vector3Normalize(config.lightDir), -15.0f);
+    lightCamera.position = Vector3Scale(Vector3Normalize(level.lightDir), -15.0f);
     lightCamera.target = Vector3Zero();
     lightCamera.projection = CAMERA_ORTHOGRAPHIC; // Use an orthographic projection for directional lights
     lightCamera.up = (Vector3){ 0.0f, 1.0f, 0.0f };
