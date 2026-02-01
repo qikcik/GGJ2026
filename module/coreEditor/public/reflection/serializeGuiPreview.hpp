@@ -68,12 +68,10 @@ public:
         }
 
         if (ImGui::BeginCombo("Searchable Combo", selected_idx == -1 ? "Select..." : items[selected_idx])) {
-            // Pole tekstowe do filtrowania
             ImGui::InputText("##Filter", filter, IM_ARRAYSIZE(filter));
             ImGui::Separator();
 
             for (int i = 0; i < items.size(); i++) {
-                // Logika filtrowania (case-insensitive wymagałoby dodatkowej funkcji)
                 if (strlen(filter) > 0 && strstr(items[i], filter) == nullptr) {
                     continue ;
                 }

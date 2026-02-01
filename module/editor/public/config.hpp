@@ -12,6 +12,9 @@ public:
     float animationTime {0.25f};
     std::string test;
     bool grid = false;
+    std::string startingLevel = "1";
+    std::string gameoverText = "GAMEOVER - tym razem sie nie udalo, ale wiem wiecej";
+    std::string gameoverRetryText = "sprobuj jeszcze raz";
 
     Config() {
         edCamera.position = (Vector3){ 25, 25.0f, 50 };
@@ -29,5 +32,8 @@ public:
         bool value = edCamera.projection == CAMERA_ORTHOGRAPHIC;
         inSerialize->propertyBool("camera_ortographic",value);
         edCamera.projection = value ? CAMERA_ORTHOGRAPHIC : CAMERA_PERSPECTIVE;
+        inSerialize->propertyString("startingLevel",startingLevel);
+        inSerialize->propertyString("gameoverText",gameoverText);
+        inSerialize->propertyString("gameoverRetryText",gameoverRetryText);
     }
 };

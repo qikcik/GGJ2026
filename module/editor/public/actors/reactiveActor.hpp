@@ -17,6 +17,7 @@ struct DialogOption
 
     std::string giveTag {};
     std::string goToLevel {};
+    bool giveGameover {false};
 
     bool canPreform(GameContext &ctx) {
         if (!giveTag.empty() && std::ranges::contains(ctx.world.tags, giveTag)) return false;
@@ -75,6 +76,7 @@ struct ReactiveActorState
                         inSerialize->propertyString("requiredTag",dialogOptions[i].requiredTag);
                         inSerialize->propertyString("giveTag",dialogOptions[i].giveTag);
                         inSerialize->propertyString("goToLevel",dialogOptions[i].goToLevel);
+                        inSerialize->propertyBool("giveGameover",dialogOptions[i].giveGameover);
                     });
                 }
             });

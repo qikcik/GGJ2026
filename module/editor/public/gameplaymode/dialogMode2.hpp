@@ -1,5 +1,6 @@
 #pragma once
 #include "gameContext.hpp"
+#include "gameOver.hpp"
 #include "gameplayMode.hpp"
 #include "actors/playerActor.hpp"
 #include "../windows/gameWindow.hpp"
@@ -19,7 +20,10 @@ public:
             if(option.goToLevel != "")
                 goToLevel(ctx,option.goToLevel);
 
-            goToPlayMode(ctx);
+            if (option.giveGameover)
+                ctx.nextMode = std::make_shared<GameOver>(ctx);
+            else
+                goToPlayMode(ctx);
         }
     }
 

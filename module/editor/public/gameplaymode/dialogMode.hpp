@@ -59,7 +59,7 @@ public:
                 DrawRectangleGradientV((int)text_box.x+2, (int)text_box.y+2, (int)text_box.width-4, (int)text_box.height-4, WHITE, WHITE);
                 DrawRectangleLinesEx(text_box, 4, BLACK);
 
-                if ( options[i].giveTag != "" || options[i].goToLevel != "")
+                if ( options[i].giveTag != "" || options[i].goToLevel != "" || option.giveGameover)
                     DrawTextBoxed(GetFontDefault(),TextSubtext(options[i].label.c_str(),0,dialogCounter/(1.f/speed)),text_inner,24,1,true,RED);
                 else
                     DrawTextBoxed(GetFontDefault(),TextSubtext(options[i].label.c_str(),0,dialogCounter/(1.f/speed)),text_inner,24,1,true,BLACK);

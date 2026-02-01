@@ -3,6 +3,7 @@
 #include "gameContext.hpp"
 #include "gameplayMode.hpp"
 #include "actors/playerActor.hpp"
+#include "gameOver.hpp"
 
 class PlayMode : public GameplayMode
 {

@@ -55,6 +55,7 @@ public:
         ImGui::SameLine();
         if(ImGui::Button("Start")) {
             //gameCtx.level.saveToFile(level_name,gameCtx);
+            gameCtx.world.tags.clear();
             WindowManager::get()->queueAddWindowView(std::make_unique<GameWindow>(gameCtx,level_name));
         }
 
