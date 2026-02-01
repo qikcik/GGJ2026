@@ -8,14 +8,14 @@
 #include "reflection/serializeXML.hpp"
 
 
-inline void ConfigSave(std::string name, Config& state)
+inline void ConfigSave(std::string name, Config& state,World& world)
 {
     rapidxml::xml_document<> root {};
     rapidxml::xml_node<> *node = root.allocate_node(rapidxml::node_element, "config", nullptr );
     root.append_node(node);
 
     SerializeXMLWriter serializer{&root,node};
-    state.onSerialize(&serializer);
+    state.onSerialize(&serializer,world);
 
 
     std::ofstream out(name+".xml");
@@ -23,7 +23,7 @@ inline void ConfigSave(std::string name, Config& state)
     root.clear();
 }
 
-inline void ConfigLoad(std::string name, Config& state)
+inline void ConfigLoad(std::string name, Config& state,World& world)
 {
     try {
         rapidxml::file<> in((name+".xml").c_str());
@@ -33,7 +33,7 @@ inline void ConfigLoad(std::string name, Config& state)
 
         reader.propertyStruct("config",[&](ISerialize* ctx)
         {
-            state.onSerialize(ctx);
+            state.onSerialize(ctx,world);
         });
 
         root.clear();

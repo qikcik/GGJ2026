@@ -62,7 +62,7 @@ int main(void)
     });
 
     ChangeDirectory("assets");
-    ConfigLoad("config",config);
+    ConfigLoad("config",config,world);
 
     GameContext gameContext {config,world};
     EditorContext editorContext;
@@ -73,7 +73,7 @@ int main(void)
 
     WindowManager::get()->queueAddWindowView(std::make_unique<EditorWindow>(gameContext,editorContext));
     WindowManager::get()->queueAddWindowView(std::make_unique<SelectedWindow>(gameContext,editorContext));
-    WindowManager::get()->queueAddWindowView(std::make_unique<ConfigWindow>(gameContext.config));
+    WindowManager::get()->queueAddWindowView(std::make_unique<ConfigWindow>(gameContext.config,world));
     WindowManager::get()->queueAddWindowView(std::make_unique<TagsWindow>(gameContext));
     //WindowManager::get()->queueAddWindowView(std::make_unique<ProfilerWindow>());
 

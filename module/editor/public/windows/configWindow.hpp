@@ -8,8 +8,7 @@
 class ConfigWindow : public Window
 {
 public:
-    explicit ConfigWindow(Config& config) : Window("ConfigWindow"), config(config)
-    {
+    explicit ConfigWindow(Config& config,World& world) : Window("ConfigWindow"), config(config), world_(world) {
     }
 
     ~ConfigWindow()
@@ -30,17 +29,17 @@ public:
     {
         SerializeGuiPreview preview;
         ImGui::SeparatorText("config");
-        config.onSerialize(&preview);
+        config.onSerialize(&preview,world_);
 
         ImGui::Separator();
 
         ImGui::SeparatorText("config action");
         if(ImGui::Button("Save")) {
-            ConfigSave("config",config);
+            ConfigSave("config",config,world_);
         }
         ImGui::SameLine();
         if(ImGui::Button("Load")) {
-            ConfigLoad("config",config);
+            ConfigLoad("config",config,world_);
         }
         ImGui::SameLine();
         if(ImGui::Button("Default")) {
@@ -50,4 +49,5 @@ public:
 
 protected:
     Config& config;
+    World &world_;
 };
