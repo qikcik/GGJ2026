@@ -348,10 +348,23 @@
 					<framesNum>1</framesNum>
 					<frames>
 						<0>
-							<model>models/AAA.vox</model>
+							<model>models/characters/character_Guest_01_Dead_Red.vox</model>
 						</0>
 					</frames>
-					<interactable>false</interactable>
+					<interactable>true</interactable>
+					<initialMsg>Nie bedziesz jej juz potrzebowal</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>podnies maske</label>
+							<message>troche brudna</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag>maskred</giveTag>
+							<goToLevel/>
+							<giveGameover>false</giveGameover>
+						</0>
+					</option>
 				</2>
 			</states>
 		</instance>
@@ -379,9 +392,9 @@
 							<label>mam czerwona maske</label>
 							<message>dobrze wchodz</message>
 							<exitMessage>okej</exitMessage>
-							<requiredTag/>
+							<requiredTag>maskred</requiredTag>
 							<giveTag/>
-							<goToLevel/>
+							<goToLevel>4</goToLevel>
 							<giveGameover>false</giveGameover>
 						</0>
 					</option>
