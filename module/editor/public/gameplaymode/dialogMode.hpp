@@ -27,14 +27,15 @@ public:
             selected++;
             animCounter = 0;
         }
+        if (selected <0) selected = 0;
+        if (selected>=options.size()) selected=options.size()-1;
+
         if (IsKeyPressed(KEY_SPACE)) {
             if(options[selected].giveTag != "")
                 ctx.world.tags.push_back(options[selected].giveTag);
 
             ctx.nextMode = std::make_shared<DialogMode2>(ctx,options[selected]);
         }
-        if (selected <0) selected = 0;
-        if (selected>=options.size()) selected=options.size()-1;
     }
 
     void onDraw2D() override {
