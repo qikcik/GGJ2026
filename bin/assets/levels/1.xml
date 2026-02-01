@@ -1023,8 +1023,8 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-2.750000</pos.x>
-			<pos.y>1.500000</pos.y>
+			<pos.x>-2.250000</pos.x>
+			<pos.y>2.250000</pos.y>
 			<pos.z>-23.000000</pos.z>
 			<model>models/props/sign_Bar.vox</model>
 		</instance>
@@ -1066,15 +1066,15 @@
 	</instances>
 	<light>
 		<ambient>
-			<r>0.759615</r>
-			<g>0.533192</g>
-			<b>0.533192</b>
+			<r>0.144769</r>
+			<g>0.130687</g>
+			<b>0.792553</b>
 			<a>0.000000</a>
 		</ambient>
 		<light>
-			<r>0.826923</r>
-			<g>0.532729</g>
-			<b>0.532729</b>
+			<r>0.075939</r>
+			<g>0.191758</g>
+			<b>0.648936</b>
 			<a>0.000000</a>
 		</light>
 		<light.x>0.313678</light.x>
