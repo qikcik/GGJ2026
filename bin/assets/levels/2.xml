@@ -239,20 +239,6 @@
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>17.250000</pos.x>
-			<pos.y>0.750000</pos.y>
-			<pos.z>-1.250000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Guest_Woman_Fight_02.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Guest_Woman_Fight_01.vox</model>
-			</frame2>
-		</instance>
-		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.500000</pos.y>
@@ -366,9 +352,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>17.000000</pos.x>
+			<pos.x>16.500000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>8.500000</pos.z>
+			<pos.z>6.500000</pos.z>
 			<timeModifier>1.000001</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -437,9 +423,9 @@
 		</instance>
 		<instance>
 			<TYPE>PlayerActor</TYPE>
-			<pos.x>4.500000</pos.x>
+			<pos.x>10.000000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-2.750000</pos.z>
+			<pos.z>8.500000</pos.z>
 			<model>models/characters/character_Main.vox</model>
 		</instance>
 		<instance>
@@ -497,7 +483,7 @@
 			<pos.x>13.750000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>-2.500000</pos.z>
-			<statesNum>1</statesNum>
+			<statesNum>2</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
@@ -523,6 +509,17 @@
 						</0>
 					</option>
 				</0>
+				<1>
+					<requiredTag>shooting</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_01_Green_Dead.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</1>
 			</states>
 		</instance>
 		<instance>
@@ -742,14 +739,14 @@
 				</0>
 				<1>
 					<requiredTag>shooting</requiredTag>
-					<timeModifier>1.000000</timeModifier>
+					<timeModifier>0.300000</timeModifier>
 					<framesNum>2</framesNum>
 					<frames>
 						<0>
-							<model>models/characters/character_Shooter.vox</model>
+							<model>models/characters/character_Shooter_Shooting.vox</model>
 						</0>
 						<1>
-							<model>models/characters/character_Shooter_crouch.vox</model>
+							<model>models/characters/character_Shooter_Shooting_02.vox</model>
 						</1>
 					</frames>
 					<interactable>false</interactable>
@@ -758,9 +755,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>7.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-28.000000</pos.z>
+			<pos.x>-5.250000</pos.x>
+			<pos.y>0.750000</pos.y>
+			<pos.z>-27.000000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -776,116 +773,14 @@
 				</0>
 				<1>
 					<requiredTag>shooting</requiredTag>
-					<timeModifier>1.000000</timeModifier>
+					<timeModifier>0.300000</timeModifier>
 					<framesNum>2</framesNum>
 					<frames>
 						<0>
-							<model>models/characters/character_Shooter_crouch.vox</model>
+							<model>models/characters/character_Shooter_Shooting.vox</model>
 						</0>
 						<1>
-							<model>models/characters/character_Shooter.vox</model>
-						</1>
-					</frames>
-					<interactable>false</interactable>
-				</1>
-			</states>
-		</instance>
-		<instance>
-			<TYPE>ReactiveActor</TYPE>
-			<pos.x>13.250000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>-27.500000</pos.z>
-			<statesNum>2</statesNum>
-			<states>
-				<0>
-					<requiredTag/>
-					<timeModifier>1.000000</timeModifier>
-					<framesNum>1</framesNum>
-					<frames>
-						<0>
-							<model>models/props/empty.vox</model>
-						</0>
-					</frames>
-					<interactable>false</interactable>
-				</0>
-				<1>
-					<requiredTag>shooting</requiredTag>
-					<timeModifier>1.000000</timeModifier>
-					<framesNum>2</framesNum>
-					<frames>
-						<0>
-							<model>models/characters/character_Shooter_crouch.vox</model>
-						</0>
-						<1>
-							<model>models/characters/character_Shooter.vox</model>
-						</1>
-					</frames>
-					<interactable>false</interactable>
-				</1>
-			</states>
-		</instance>
-		<instance>
-			<TYPE>ReactiveActor</TYPE>
-			<pos.x>-4.000000</pos.x>
-			<pos.y>1.250000</pos.y>
-			<pos.z>-26.500000</pos.z>
-			<statesNum>2</statesNum>
-			<states>
-				<0>
-					<requiredTag/>
-					<timeModifier>1.000000</timeModifier>
-					<framesNum>1</framesNum>
-					<frames>
-						<0>
-							<model>models/props/empty.vox</model>
-						</0>
-					</frames>
-					<interactable>false</interactable>
-				</0>
-				<1>
-					<requiredTag>shooting</requiredTag>
-					<timeModifier>1.000000</timeModifier>
-					<framesNum>2</framesNum>
-					<frames>
-						<0>
-							<model>models/characters/character_Shooter_crouch.vox</model>
-						</0>
-						<1>
-							<model>models/characters/character_Shooter.vox</model>
-						</1>
-					</frames>
-					<interactable>false</interactable>
-				</1>
-			</states>
-		</instance>
-		<instance>
-			<TYPE>ReactiveActor</TYPE>
-			<pos.x>-7.750000</pos.x>
-			<pos.y>1.750000</pos.y>
-			<pos.z>-24.750000</pos.z>
-			<statesNum>2</statesNum>
-			<states>
-				<0>
-					<requiredTag/>
-					<timeModifier>1.000000</timeModifier>
-					<framesNum>1</framesNum>
-					<frames>
-						<0>
-							<model>models/props/empty.vox</model>
-						</0>
-					</frames>
-					<interactable>false</interactable>
-				</0>
-				<1>
-					<requiredTag>shooting</requiredTag>
-					<timeModifier>1.000000</timeModifier>
-					<framesNum>2</framesNum>
-					<frames>
-						<0>
-							<model>models/characters/character_Shooter_crouch.vox</model>
-						</0>
-						<1>
-							<model>models/characters/character_Shooter.vox</model>
+							<model>models/characters/character_Shooter_Shooting_02.vox</model>
 						</1>
 					</frames>
 					<interactable>false</interactable>
@@ -1091,6 +986,142 @@
 						<0>
 							<model>models/characters/character_Guest_01_Green_Dead.vox</model>
 						</0>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>17.250000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-1.250000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_Woman_Fight_01.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guest_Woman_Fight_02.vox</model>
+						</1>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>shooting</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_Woman_Green_Dead.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>-10.250000</pos.x>
+			<pos.y>0.750000</pos.y>
+			<pos.z>-27.000000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/empty.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>shooting</requiredTag>
+					<timeModifier>0.300000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Shooter_Shooting.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Shooter_Shooting_02.vox</model>
+						</1>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>8.250000</pos.x>
+			<pos.y>0.750000</pos.y>
+			<pos.z>-28.750000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/empty.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>shooting</requiredTag>
+					<timeModifier>0.300000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Shooter_Shooting.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Shooter_Shooting_02.vox</model>
+						</1>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>13.000000</pos.x>
+			<pos.y>0.750000</pos.y>
+			<pos.z>-27.250000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/empty.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>shooting</requiredTag>
+					<timeModifier>0.300000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Shooter_Shooting.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Shooter_Shooting_02.vox</model>
+						</1>
 					</frames>
 					<interactable>false</interactable>
 				</1>
