@@ -74,13 +74,6 @@
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-23.750000</pos.z>
-			<model>models/modular/wall_Door_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>0.250000</pos.x>
-			<pos.y>0.500000</pos.y>
 			<pos.z>25.000000</pos.z>
 			<model>models/modular/wall_Door_Brick.vox</model>
 		</instance>
@@ -170,13 +163,6 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>7.500000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>7.750000</pos.z>
-			<model>models/props/trashcan.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
 			<pos.x>-1.000000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>0.750000</pos.z>
@@ -219,23 +205,214 @@
 		</instance>
 		<instance>
 			<TYPE>PlayerActor</TYPE>
-			<pos.x>1.500000</pos.x>
+			<pos.x>3.750000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>13.750000</pos.z>
+			<pos.z>-9.750000</pos.z>
 			<model>models/characters/character_Main.vox</model>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>9.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>5.000000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Janitor.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Janitor_crouch.vox</model>
+						</1>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>table turnoff</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/empty.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>8.000000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>8.000000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/trashcan_WithGun.vox</model>
+						</0>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Ooo mój pistolet</initialMsg>
+					<optionsNum>2</optionsNum>
+					<option>
+						<0>
+							<label>dzieki za pomoc</label>
+							<message>biore</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag>table turnoff</giveTag>
+							<goToLevel/>
+							<giveGameover>false</giveGameover>
+						</0>
+						<1>
+							<label/>
+							<message/>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+							<giveGameover>false</giveGameover>
+						</1>
+					</option>
+				</0>
+				<1>
+					<requiredTag>table turnoff</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/trashcan.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>1.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>5.750000</pos.z>
+			<statesNum>3</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/empty.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>table turnoff</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_01_Red.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guest_01_Red_crouch.vox</model>
+						</1>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Wybacz potrzebuje Twojej maski</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>Zabij go</label>
+							<message>puf</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag>killred</giveTag>
+							<goToLevel/>
+							<giveGameover>false</giveGameover>
+						</0>
+					</option>
+				</1>
+				<2>
+					<requiredTag>killred</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_01_Dead_Red.vox</model>
+						</0>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Nie bedziesz jej juz potrzebowal</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>podnies maske</label>
+							<message>troche brudna</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag>maskred</giveTag>
+							<goToLevel/>
+							<giveGameover>false</giveGameover>
+						</0>
+					</option>
+				</2>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>0.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-23.750000</pos.z>
+			<statesNum>1</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/modular/wall_Door_Brick.vox</model>
+						</0>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg>To wejscie tylko dla VIpów</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>mam czerwona maske</label>
+							<message>dobrze wchodz</message>
+							<exitMessage>okej</exitMessage>
+							<requiredTag>maskred</requiredTag>
+							<giveTag/>
+							<goToLevel>4</goToLevel>
+							<giveGameover>false</giveGameover>
+						</0>
+					</option>
+				</0>
+			</states>
 		</instance>
 	</instances>
 	<light>
 		<ambient>
-			<r>0.759615</r>
-			<g>0.533192</g>
-			<b>0.533192</b>
+			<r>0.168310</r>
+			<g>0.186599</g>
+			<b>0.515790</b>
 			<a>0.000000</a>
 		</ambient>
 		<light>
-			<r>0.826923</r>
-			<g>0.532729</g>
-			<b>0.532729</b>
+			<r>0.296758</r>
+			<g>0.248698</g>
+			<b>0.705263</b>
 			<a>0.000000</a>
 		</light>
 		<light.x>0.313678</light.x>

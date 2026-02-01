@@ -1384,15 +1384,15 @@
 	</instances>
 	<light>
 		<ambient>
-			<r>0.759615</r>
-			<g>0.533192</g>
-			<b>0.533192</b>
+			<r>0.208532</r>
+			<g>0.138947</g>
+			<b>0.800000</b>
 			<a>0.000000</a>
 		</ambient>
 		<light>
-			<r>0.826923</r>
-			<g>0.532729</g>
-			<b>0.532729</b>
+			<r>0.205815</r>
+			<g>0.200222</g>
+			<b>0.731579</b>
 			<a>0.000000</a>
 		</light>
 		<light.x>0.313678</light.x>
@@ -1400,12 +1400,12 @@
 		<light.z>-0.313678</light.z>
 	</light>
 	<camera>
-		<position.x>25.000000</position.x>
+		<position.x>22.978724</position.x>
 		<position.y>25.000000</position.y>
-		<position.z>50.000000</position.z>
-		<target.x>4.775684</target.x>
-		<target.y>4.258984</target.y>
-		<target.z>-3.951721</target.z>
+		<position.z>40.997437</position.z>
+		<target.x>-2.924047</target.x>
+		<target.y>-0.668993</target.y>
+		<target.z>-8.197556</target.z>
 		<fovy>30.000000</fovy>
 	</camera>
 </root>
