@@ -17,11 +17,12 @@ public:
 
         if (IsKeyPressed(KEY_SPACE)) {
 
-            ctx.world.tags =  ctx.world.tags
-                | std::views::filter([](const auto& s) {
-                    return s == "maskblue" || s == "maskyellow" || s == "maskred";
-                })
-                | std::ranges::to<std::vector>();
+            // auto& tags = ctx.world.tags;
+            //
+            // std::erase_if(tags, [&](const std::string& s) {
+            //     return ! (s == ctx.config.preserveTag1 || s == ctx.config.preserveTag2 || s == ctx.config.preserveTag3);
+            //  });
+
 
             goToLevel(ctx,ctx.config.startingLevel);
             goToPlayMode(ctx);
