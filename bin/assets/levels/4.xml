@@ -658,6 +658,62 @@
 			<pos.z>29.250000</pos.z>
 			<model>models/modular/wall_Brick.vox</model>
 		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-9.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/Books90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-13.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/Books90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-16.750000</pos.z>
+			<model>models/props/drinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-20.250000</pos.z>
+			<model>models/props/drinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-18.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-7.500000</pos.z>
+			<model>models/props/drinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-6.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/Books90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/Books90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-21.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-31.500000</pos.z>
+			<model>models/props/trashcan.vox</model>
+		</instance>
 	</instances>
 	<light>
 		<ambient>
