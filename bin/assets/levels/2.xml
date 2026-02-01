@@ -254,7 +254,7 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>10.250000</pos.x>
+			<pos.x>0.250000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>-34.000000</pos.z>
 			<model>models/modular/wall_Door_Brick.vox</model>
@@ -286,13 +286,6 @@
 			<pos.y>0.500000</pos.y>
 			<pos.z>-29.750000</pos.z>
 			<model>models/modular/wall_Corner_Right_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>0.250000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.750000</pos.z>
-			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
@@ -347,8 +340,8 @@
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>29.250000</pos.z>
-			<model>models/modular/wall_Brick.vox</model>
+			<pos.z>25.000000</pos.z>
+			<model>models/modular/wall_Door_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
@@ -374,7 +367,7 @@
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
 			<pos.x>17.000000</pos.x>
-			<pos.y>1.000000</pos.y>
+			<pos.y>0.500000</pos.y>
 			<pos.z>8.500000</pos.z>
 			<timeModifier>1.000001</timeModifier>
 			<frameNum>2</frameNum>
@@ -386,9 +379,16 @@
 			</frame2>
 		</instance>
 		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>10.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
 			<TYPE>ReactiveActor</TYPE>
 			<pos.x>-8.500000</pos.x>
-			<pos.y>0.750000</pos.y>
+			<pos.y>0.500000</pos.y>
 			<pos.z>7.250000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
@@ -445,7 +445,7 @@
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
 			<pos.x>-16.250000</pos.x>
-			<pos.y>1.000000</pos.y>
+			<pos.y>0.500000</pos.y>
 			<pos.z>-20.750000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
@@ -649,7 +649,7 @@
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
 			<pos.x>-1.000000</pos.x>
-			<pos.y>0.750000</pos.y>
+			<pos.y>0.500000</pos.y>
 			<pos.z>-27.000000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
@@ -705,9 +705,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>12.250000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>-27.250000</pos.z>
+			<pos.x>3.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-28.750000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -792,7 +792,7 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>4.000000</pos.x>
+			<pos.x>13.250000</pos.x>
 			<pos.y>1.000000</pos.y>
 			<pos.z>-27.500000</pos.z>
 			<statesNum>2</statesNum>
@@ -1031,7 +1031,7 @@
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
 			<pos.x>0.000000</pos.x>
-			<pos.y>2.250000</pos.y>
+			<pos.y>0.500000</pos.y>
 			<pos.z>-16.250000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
