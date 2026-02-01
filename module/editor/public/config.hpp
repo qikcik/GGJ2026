@@ -48,6 +48,8 @@ public:
     std::string preserveTag3 = "maskred";
 
     std::vector<PlayerState> playerStates {1};
+    float colisionOffset = 1.5f;
+    bool  debug = false;
 
     Config() {
         edCamera.position = (Vector3){ 25, 25.0f, 50 };
@@ -71,7 +73,8 @@ public:
         inSerialize->propertyString("preserveTag1",preserveTag1);
         inSerialize->propertyString("preserveTag2",preserveTag2);
         inSerialize->propertyString("preserveTag3",preserveTag3);
-
+        inSerialize->propertyFloat("colisionOffset",colisionOffset);
+        inSerialize->propertyBool("debug",debug);
 
         int num = playerStates.size();
         inSerialize->propertyInt("statesNum",num);

@@ -9,17 +9,26 @@
 	<preserveTag1>maskblue</preserveTag1>
 	<preserveTag2>maskyellow</preserveTag2>
 	<preserveTag3>maskred</preserveTag3>
-	<statesNum>1</statesNum>
+	<statesNum>2</statesNum>
 	<states>
 		<0>
 			<requiredTag/>
 			<framesNum>1</framesNum>
 			<frames>
 				<0>
-					<model>models/characters/character_Guests_Fight_01.vox</model>
+					<model>models/characters/character_Main.vox</model>
 				</0>
 			</frames>
 		</0>
+		<1>
+			<requiredTag>maskgreen</requiredTag>
+			<framesNum>1</framesNum>
+			<frames>
+				<0>
+					<model>models/characters/character_Main_Green.vox</model>
+				</0>
+			</frames>
+		</1>
 	</states>
 </config>
 

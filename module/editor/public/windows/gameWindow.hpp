@@ -171,9 +171,9 @@ inline void GameWindow::onUpdate(float deltaTime) {
             if(config.grid)
                 DrawGrid(100,1);
             draw();
-            if ( gameCtx.player) {
+            if ( gameCtx.player && gameCtx.config.debug) {
                 auto box = gameCtx.player->getBoundingBox();
-                box.min.y += 1;
+                box.min.y += gameCtx.config.colisionOffset;
                 DrawBoundingBox(box,GREEN);
             }
         EndMode3D();

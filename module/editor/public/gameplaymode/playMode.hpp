@@ -35,7 +35,7 @@ public:
                 ctx.player->pos.z += 0.25;
 
             auto playerBox = ctx.player->getBoundingBox();
-            playerBox.min.y += 1;
+            playerBox.min.y += ctx.config.colisionOffset;
             std::shared_ptr<ActorBase> other {};
             for (auto it : ctx.level.actors) {
                 if ( ctx.player != it && CheckCollisionBoxes(playerBox,it->getBoundingBox()))
