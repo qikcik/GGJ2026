@@ -414,34 +414,6 @@
 			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>8.750000</pos.x>
-			<pos.y>0.750000</pos.y>
-			<pos.z>-21.750000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Janitor_crouch.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Janitor.vox</model>
-			</frame2>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>8.250000</pos.x>
-			<pos.y>1.250000</pos.y>
-			<pos.z>15.750000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Main.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Main_crouch.vox</model>
-			</frame2>
-		</instance>
-		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>12.000000</pos.y>
@@ -708,20 +680,6 @@
 			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>28.500000</pos.x>
-			<pos.y>0.750000</pos.y>
-			<pos.z>13.250000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/Guest_Vomit.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/Guest_Vomiting.vox</model>
-			</frame2>
-		</instance>
-		<instance>
 			<TYPE>ReactiveActor</TYPE>
 			<pos.x>-5.500000</pos.x>
 			<pos.y>1.250000</pos.y>
@@ -730,6 +688,7 @@
 			<states>
 				<0>
 					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
 					<framesNum>2</framesNum>
 					<frames>
 						<0>
@@ -739,9 +698,39 @@
 							<model>models/characters/character_Guard_crouch.vox</model>
 						</1>
 					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Wow nie wejdziesz bez maski</initialMsg>
+					<optionsNum>4</optionsNum>
+					<option>
+						<0>
+							<label>Odejdz</label>
+							<requiredTag/>
+							<giveTag>aboutmask</giveTag>
+							<goToLevel/>
+						</0>
+						<1>
+							<label>Zagroz bronia</label>
+							<requiredTag>pistol</requiredTag>
+							<giveTag/>
+							<goToLevel/>
+						</1>
+						<2>
+							<label>Nalegaj na wejscie</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</2>
+						<3>
+							<label>Mam maske</label>
+							<requiredTag>maskyellow</requiredTag>
+							<giveTag/>
+							<goToLevel>2</goToLevel>
+						</3>
+					</option>
 				</0>
 				<1>
-					<requiredTag>maskyellow</requiredTag>
+					<requiredTag>angry</requiredTag>
+					<timeModifier>1.000000</timeModifier>
 					<framesNum>2</framesNum>
 					<frames>
 						<0>
@@ -751,84 +740,152 @@
 							<model>models/characters/character_Shooter_crouch.vox</model>
 						</1>
 					</frames>
+					<interactable>false</interactable>
 				</1>
 				<2>
 					<requiredTag>Angry</requiredTag>
+					<timeModifier>1.000000</timeModifier>
 					<framesNum>1</framesNum>
 					<frames>
 						<0>
 							<model>models/characters/character_Shooter_crouch.vox</model>
 						</0>
 					</frames>
+					<interactable>false</interactable>
 				</2>
 			</states>
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>0.000000</pos.x>
+			<pos.x>17.500000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>16.000000</pos.z>
+			<pos.z>14.000000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
-					<framesNum>1</framesNum>
+					<timeModifier>8.000000</timeModifier>
+					<framesNum>2</framesNum>
 					<frames>
 						<0>
 							<model>models/characters/Guest_Vomiting_Mask.vox</model>
 						</0>
+						<1>
+							<model>models/characters/Guest_Vomit_Mask.vox</model>
+						</1>
 					</frames>
+					<interactable>true</interactable>
+					<initialMsg>bleh bleh...</initialMsg>
+					<optionsNum>2</optionsNum>
+					<option>
+						<0>
+							<label>okradnij z maski</label>
+							<requiredTag/>
+							<giveTag>maskyellow</giveTag>
+							<goToLevel/>
+						</0>
+						<1>
+							<label>Odejdz</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</1>
+					</option>
 				</0>
 				<1>
 					<requiredTag>maskyellow</requiredTag>
-					<framesNum>1</framesNum>
+					<timeModifier>8.000000</timeModifier>
+					<framesNum>2</framesNum>
 					<frames>
 						<0>
 							<model>models/characters/Guest_Vomit.vox</model>
 						</0>
+						<1>
+							<model>models/characters/Guest_Vomiting.vox</model>
+						</1>
 					</frames>
+					<interactable>false</interactable>
 				</1>
 			</states>
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>-5.750000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>-17.000000</pos.z>
-			<statesNum>3</statesNum>
+			<pos.x>3.250000</pos.x>
+			<pos.y>1.250000</pos.y>
+			<pos.z>-21.250000</pos.z>
+			<statesNum>1</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
 					<framesNum>2</framesNum>
 					<frames>
 						<0>
-							<model>models/characters/character_Main.vox</model>
+							<model>models/characters/character_Janitor.vox</model>
 						</0>
 						<1>
-							<model>models/characters/character_Main_crouch.vox</model>
+							<model>models/characters/character_Janitor_crouch.vox</model>
 						</1>
 					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Pomoc Ci w czyms?</initialMsg>
+					<optionsNum>3</optionsNum>
+					<option>
+						<0>
+							<label>Opowiedz mi o tych maskach</label>
+							<requiredTag>aboutmask</requiredTag>
+							<giveTag>pistol_out</giveTag>
+							<goToLevel/>
+						</0>
+						<1>
+							<label>Pomoz przemycic</label>
+							<requiredTag/>
+							<giveTag>pistol_out</giveTag>
+							<goToLevel/>
+						</1>
+						<2>
+							<label>Odejdz</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</2>
+					</option>
 				</0>
-				<1>
-					<requiredTag>maskyellow</requiredTag>
-					<framesNum>1</framesNum>
-					<frames>
-						<0>
-							<model>models/characters/character_Main_crouch.vox</model>
-						</0>
-					</frames>
-				</1>
-				<2>
-					<requiredTag>Angry</requiredTag>
-					<framesNum>1</framesNum>
-					<frames>
-						<0>
-							<model>models/characters/character_Main_Dead.vox</model>
-						</0>
-					</frames>
-				</2>
 			</states>
 		</instance>
+		<instance>
+			<TYPE>PlayerActor</TYPE>
+			<pos.x>0.000000</pos.x>
+			<pos.y>0.750000</pos.y>
+			<pos.z>0.000000</pos.z>
+			<model>models/characters/character_Main.vox</model>
+		</instance>
 	</instances>
+	<light>
+		<ambient>
+			<r>0.759615</r>
+			<g>0.533192</g>
+			<b>0.533192</b>
+			<a>0.000000</a>
+		</ambient>
+		<light>
+			<r>0.826923</r>
+			<g>0.532729</g>
+			<b>0.532729</b>
+			<a>0.000000</a>
+		</light>
+		<light.x>0.313678</light.x>
+		<light.y>-0.896221</light.y>
+		<light.z>-0.313678</light.z>
+	</light>
+	<camera>
+		<position.x>25.000000</position.x>
+		<position.y>25.000000</position.y>
+		<position.z>50.000000</position.z>
+		<target.x>0.000000</target.x>
+		<target.y>0.000000</target.y>
+		<target.z>0.000000</target.z>
+		<fovy>25.000000</fovy>
+	</camera>
 </root>
 

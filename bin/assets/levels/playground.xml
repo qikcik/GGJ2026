@@ -5,757 +5,475 @@
 			<pos.x>-9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>0.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>9.750000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>19.500000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>19.500000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-19.500000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>-19.500000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-38.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>-38.250000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-29.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>-29.250000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>29.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>29.250000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>30.000000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>0.000000</y>
-				<z>30.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>30.000000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>0.000000</y>
-				<z>30.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>20.250000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>30.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>30.250000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-19.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>-19.750000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-19.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>-19.750000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-29.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>-29.750000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>20.250000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-19.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-19.750000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-29.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-29.750000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-29.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>-29.750000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-39.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>-39.750000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-39.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-39.750000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-19.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>-19.750000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>30.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>30.250000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>13.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>13.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>20.250000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-9.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-26.750000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>0.000000</y>
-				<z>-26.750000</z>
-			</position>
-			<model>models\modular\wall_Door_Brick.vox</model>
+			<model>models/modular/wall_Door_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>0.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>0.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>20.250000</x>
-				<y>0.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>30.250000</pos.x>
 			<pos.y>6.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>30.250000</x>
-				<y>6.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>6.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>6.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>6.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>6.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-9.750000</pos.x>
 			<pos.y>6.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>-9.750000</x>
-				<y>6.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-19.750000</pos.x>
 			<pos.y>6.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>-19.750000</x>
-				<y>6.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-19.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>-19.750000</x>
-				<y>0.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-29.750000</pos.x>
 			<pos.y>6.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>-29.750000</x>
-				<y>6.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>30.250000</pos.x>
 			<pos.y>18.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>30.250000</x>
-				<y>18.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>6.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>20.250000</x>
-				<y>6.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>12.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>20.250000</x>
-				<y>12.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>12.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>10.250000</x>
-				<y>12.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-29.750000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>-29.750000</x>
-				<y>0.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>30.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>30.250000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>39.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>39.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models\modular\road.vox</model>
+			<model>models/modular/road.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>40.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>40.250000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>16.250000</pos.x>
 			<pos.y>1.000000</pos.y>
 			<pos.z>-22.000000</pos.z>
-			<position>
-				<x>16.250000</x>
-				<y>1.000000</y>
-				<z>-22.000000</z>
-			</position>
-			<model>models\characters\character_Janitor.vox</model>
+			<model>models/characters/character_Janitor.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.250000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>20.250000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models\modular\Floor_Stone.vox</model>
+			<model>models/modular/Floor_Stone.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>0.250000</pos.x>
 			<pos.y>12.000000</pos.y>
 			<pos.z>-22.500000</pos.z>
-			<position>
-				<x>0.250000</x>
-				<y>12.000000</y>
-				<z>-22.500000</z>
-			</position>
-			<model>models\modular\wall_Brick.vox</model>
+			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-6.000000</pos.x>
 			<pos.y>1.000000</pos.y>
 			<pos.z>-20.250000</pos.z>
-			<position>
-				<x>-6.000000</x>
-				<y>1.000000</y>
-				<z>-20.250000</z>
-			</position>
-			<model>models\characters\character_Guard.vox</model>
+			<model>models/characters/character_Guard.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>20.750000</pos.x>
 			<pos.y>1.000000</pos.y>
 			<pos.z>13.000000</pos.z>
-			<position>
-				<x>20.750000</x>
-				<y>1.000000</y>
-				<z>13.000000</z>
-			</position>
-			<model>models\characters\character_Guest.vox</model>
+			<model>models/characters/character_Guest.vox</model>
+		</instance>
+		<instance>
+			<TYPE>PlayerActor</TYPE>
+			<pos.x>0.000000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>0.000000</pos.z>
+			<model>models/AAA.vox</model>
 		</instance>
 	</instances>
+	<light>
+		<ambient>
+			<r>0.759615</r>
+			<g>0.533192</g>
+			<b>0.533192</b>
+			<a>0.000000</a>
+		</ambient>
+		<light>
+			<r>0.826923</r>
+			<g>0.532729</g>
+			<b>0.532729</b>
+			<a>0.000000</a>
+		</light>
+		<light.x>0.313678</light.x>
+		<light.y>-0.896221</light.y>
+		<light.z>-0.313678</light.z>
+	</light>
+	<camera>
+		<position.x>25.000000</position.x>
+		<position.y>25.000000</position.y>
+		<position.z>50.000000</position.z>
+		<target.x>0.000000</target.x>
+		<target.y>0.000000</target.y>
+		<target.z>0.000000</target.z>
+		<fovy>25.000000</fovy>
+	</camera>
 </root>
 

@@ -3,22 +3,5 @@
 	<grid>false</grid>
 	<animationTime>0.250000</animationTime>
 	<camera_ortographic>true</camera_ortographic>
-	<light>
-		<ambient>
-			<r>0.044715</r>
-			<g>0.024615</g>
-			<b>0.159574</b>
-			<a>0.000000</a>
-		</ambient>
-		<light>
-			<r>0.125792</r>
-			<g>0.146922</g>
-			<b>0.622340</b>
-			<a>0.000000</a>
-		</light>
-		<light.x>0.200000</light.x>
-		<light.y>-0.800000</light.y>
-		<light.z>-0.350000</light.z>
-	</light>
 </config>
 
