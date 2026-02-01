@@ -8,7 +8,7 @@ class GameOver : public GameplayMode
 {
 public:
     GameOver(GameContext& ctx) : GameplayMode(ctx) {
-
+        ctx.world.tags.push_back("$gameover");
     };
 
     void onUpdate() override {

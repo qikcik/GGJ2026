@@ -9,26 +9,67 @@
 	<preserveTag1>maskblue</preserveTag1>
 	<preserveTag2>maskyellow</preserveTag2>
 	<preserveTag3>maskred</preserveTag3>
-	<statesNum>2</statesNum>
+	<colisionOffset>1.250000</colisionOffset>
+	<debug>false</debug>
+	<statesNum>5</statesNum>
 	<states>
 		<0>
 			<requiredTag/>
-			<framesNum>1</framesNum>
+			<framesNum>2</framesNum>
 			<frames>
-				<0>
+				<frame:0>
 					<model>models/characters/character_Main.vox</model>
-				</0>
+				</frame:0>
+				<frame:1>
+					<model>models/characters/character_Main_crouch.vox</model>
+				</frame:1>
 			</frames>
 		</0>
 		<1>
-			<requiredTag>maskgreen</requiredTag>
-			<framesNum>1</framesNum>
+			<requiredTag>maskyellow</requiredTag>
+			<framesNum>2</framesNum>
 			<frames>
-				<0>
+				<frame:0>
 					<model>models/characters/character_Main_Green.vox</model>
-				</0>
+				</frame:0>
+				<frame:1>
+					<model>models/characters/character_Main_Green_crouch.vox</model>
+				</frame:1>
 			</frames>
 		</1>
+		<2>
+			<requiredTag>maskblue</requiredTag>
+			<framesNum>2</framesNum>
+			<frames>
+				<frame:0>
+					<model>models/characters/character_Main_Blue.vox</model>
+				</frame:0>
+				<frame:1>
+					<model>models/characters/character_Main_Blue_crouch.vox</model>
+				</frame:1>
+			</frames>
+		</2>
+		<3>
+			<requiredTag>maskred</requiredTag>
+			<framesNum>2</framesNum>
+			<frames>
+				<frame:0>
+					<model>models/characters/character_Main_Red.vox</model>
+				</frame:0>
+				<frame:1>
+					<model>models/characters/character_Main_Red_crouch.vox</model>
+				</frame:1>
+			</frames>
+		</3>
+		<4>
+			<requiredTag>$gameover</requiredTag>
+			<framesNum>1</framesNum>
+			<frames>
+				<frame:0>
+					<model>models/characters/character_Main_Dead.vox</model>
+				</frame:0>
+			</frames>
+		</4>
 	</states>
 </config>
 

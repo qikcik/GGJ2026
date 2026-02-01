@@ -24,7 +24,7 @@ struct PlayerState
         inSerialize->propertyStruct("frames",[&](ISerialize* inSerialize) {
             for(int i = 0; i < num ; i++)
             {
-                inSerialize->propertyStruct(std::to_string(i),[&](ISerialize* inSerialize) {
+                inSerialize->propertyStruct("frame:"+std::to_string(i),[&](ISerialize* inSerialize) {
                     frames[i].onSerialize(inSerialize,world.modelNames());
                 });
             }
