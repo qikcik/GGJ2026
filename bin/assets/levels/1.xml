@@ -590,10 +590,10 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>-5.500000</pos.x>
+			<pos.x>-6.000000</pos.x>
 			<pos.y>1.250000</pos.y>
-			<pos.z>-20.000000</pos.z>
-			<statesNum>3</statesNum>
+			<pos.z>-19.750000</pos.z>
+			<statesNum>4</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
@@ -613,32 +613,40 @@
 					<option>
 						<0>
 							<label>Odejdz</label>
+							<message>musze znalezc sposob</message>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>aboutmask</giveTag>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Zagroz bronia</label>
-							<requiredTag>pistol</requiredTag>
-							<giveTag/>
+							<message>grozisz mi</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag>angry</giveTag>
 							<goToLevel/>
 						</1>
 						<2>
 							<label>Nalegaj na wejscie</label>
+							<message>Wynocha</message>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
-							<giveTag/>
+							<giveTag>angry</giveTag>
 							<goToLevel/>
 						</2>
 						<3>
 							<label>Mam maske</label>
+							<message>w porzadku tylko cie przeszukam</message>
+							<exitMessage>close</exitMessage>
 							<requiredTag>maskyellow</requiredTag>
 							<giveTag/>
-							<goToLevel>2</goToLevel>
+							<goToLevel/>
 						</3>
 					</option>
 				</0>
 				<1>
-					<requiredTag>angry</requiredTag>
+					<requiredTag/>
 					<timeModifier>1.000000</timeModifier>
 					<framesNum>2</framesNum>
 					<frames>
@@ -649,19 +657,60 @@
 							<model>models/characters/character_Shooter_crouch.vox</model>
 						</1>
 					</frames>
-					<interactable>false</interactable>
+					<interactable>true</interactable>
+					<initialMsg>GUN!! GUN !! GUN !!</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label/>
+							<message/>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</0>
+					</option>
 				</1>
 				<2>
-					<requiredTag>Angry</requiredTag>
-					<timeModifier>1.000000</timeModifier>
-					<framesNum>1</framesNum>
+					<requiredTag>angry</requiredTag>
+					<timeModifier>0.400000</timeModifier>
+					<framesNum>2</framesNum>
 					<frames>
 						<0>
-							<model>models/characters/character_Shooter_crouch.vox</model>
+							<model>models/characters/character_Shooter_Shooting.vox</model>
 						</0>
+						<1>
+							<model>models/characters/character_Shooter_Shooting_02.vox</model>
+						</1>
 					</frames>
 					<interactable>false</interactable>
 				</2>
+				<3>
+					<requiredTag>pistol_out</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guard_crouch.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guard.vox</model>
+						</1>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg/>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>Wchodz</label>
+							<message>Dobra</message>
+							<exitMessage>close</exitMessage>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel>2</goToLevel>
+						</0>
+					</option>
+				</3>
 			</states>
 		</instance>
 		<instance>
@@ -689,12 +738,16 @@
 					<option>
 						<0>
 							<label>okradnij z maski</label>
+							<message>pewnie ogorki mu zaszkodzily</message>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>maskyellow</giveTag>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Odejdz</label>
+							<message>Nie no bez przesady</message>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
@@ -742,18 +795,24 @@
 					<option>
 						<0>
 							<label>Opowiedz mi o tych maskach</label>
+							<message>Za zielonymi maskami kryja sie goscie, za niebieskimi pracownicy, a za czerwonymi VIPy</message>
+							<exitMessage>close</exitMessage>
 							<requiredTag>aboutmask</requiredTag>
 							<giveTag/>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Pomoz przemycic mi bron</label>
+							<message>Jasne zostawie ja w koszu na smieci w srodku</message>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>pistol_out</giveTag>
 							<goToLevel/>
 						</1>
 						<2>
 							<label>Odejdz</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
@@ -764,9 +823,9 @@
 		</instance>
 		<instance>
 			<TYPE>PlayerActor</TYPE>
-			<pos.x>0.000000</pos.x>
+			<pos.x>-4.500000</pos.x>
 			<pos.y>0.750000</pos.y>
-			<pos.z>0.000000</pos.z>
+			<pos.z>-9.750000</pos.z>
 			<model>models/characters/character_Main.vox</model>
 		</instance>
 		<instance>
@@ -1062,6 +1121,69 @@
 			<pos.y>0.750000</pos.y>
 			<pos.z>-10.750000</pos.z>
 			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-13.250000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>29.750000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-19.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>30.000000</pos.z>
+			<model>models/modular/Floor_Stone.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-29.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>20.000000</pos.z>
+			<model>models/modular/Floor_Stone.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-29.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>30.000000</pos.z>
+			<model>models/modular/Floor_Stone.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-13.250000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-8.000000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-2.750000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>2.500000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>29.750000</pos.z>
+			<model>models/modular/parking.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>2.500000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>35.250000</pos.z>
+			<model>models/modular/parking.vox</model>
 		</instance>
 	</instances>
 	<light>

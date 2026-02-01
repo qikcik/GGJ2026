@@ -219,13 +219,6 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>19.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>20.500000</pos.z>
-			<model>models/modular/wall_Corner_Down_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-30.000000</pos.z>
@@ -268,24 +261,10 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>20.250000</pos.x>
+			<pos.x>-7.500000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>-29.750000</pos.z>
-			<model>models/modular/wall_Corner_Right_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-9.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.750000</pos.z>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.750000</pos.z>
-			<model>models/modular/wall_Corner_Brick.vox</model>
+			<model>models/modular/Books90.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
@@ -299,7 +278,7 @@
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<model>models/modular/wall_90_Brick.vox</model>
+			<model>models/modular/wall_Brick_Bar.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
@@ -314,13 +293,6 @@
 			<pos.y>0.500000</pos.y>
 			<pos.z>10.000000</pos.z>
 			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>20.750000</pos.z>
-			<model>models/modular/wall_Corner_Left_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
@@ -382,12 +354,16 @@
 					<option>
 						<0>
 							<label>Odejdz</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Ooo niebiaska maska</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag>maskblue</requiredTag>
 							<giveTag/>
 							<goToLevel/>
@@ -409,6 +385,8 @@
 					<option>
 						<0>
 							<label>wez maske</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>maskblue</giveTag>
 							<goToLevel/>
@@ -437,9 +415,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>-16.250000</pos.x>
+			<pos.x>-12.250000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-20.750000</pos.z>
+			<pos.z>-21.250000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -460,12 +438,16 @@
 					<option>
 						<0>
 							<label>Odejdz</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Czerwona maska widze</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag>maskred</requiredTag>
 							<giveTag/>
 							<goToLevel/>
@@ -510,6 +492,8 @@
 					<option>
 						<0>
 							<label>Uspokojcie sie</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>table turnoff</giveTag>
 							<goToLevel/>
@@ -562,12 +546,16 @@
 					<option>
 						<0>
 							<label>schowaj sie</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>shooting</giveTag>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>odejdz</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
@@ -589,6 +577,8 @@
 					<option>
 						<0>
 							<label>schowaj sie</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag>beforshoting</requiredTag>
 							<giveTag>shooting</giveTag>
 							<goToLevel/>
@@ -619,12 +609,16 @@
 					<option>
 						<0>
 							<label>Wez drinka</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>table turnoff</giveTag>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Opusc</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
@@ -646,12 +640,16 @@
 					<option>
 						<0>
 							<label>Wez drinka</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag>table turnoff</requiredTag>
 							<giveTag>beforeshooting</giveTag>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Opusc</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
@@ -673,12 +671,16 @@
 					<option>
 						<0>
 							<label>Wez drinka</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag>beforeshooting</requiredTag>
 							<giveTag>shooting</giveTag>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Opusc</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
@@ -712,6 +714,8 @@
 					<option>
 						<0>
 							<label>Sluchaj dalej</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>table turnoff</giveTag>
 							<goToLevel/>
@@ -736,6 +740,8 @@
 					<option>
 						<0>
 							<label>Sluchaj dalej</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag>beforshooting</giveTag>
 							<goToLevel/>
@@ -769,12 +775,16 @@
 					<option>
 						<0>
 							<label>Do wejscia</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag/>
 							<giveTag/>
 							<goToLevel/>
 						</0>
 						<1>
 							<label>Jestem pracownikiem przepusc mnie</label>
+							<message/>
+							<exitMessage>close</exitMessage>
 							<requiredTag>maskblue</requiredTag>
 							<giveTag/>
 							<goToLevel/>
@@ -833,9 +843,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>9.250000</pos.x>
+			<pos.x>13.250000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-10.250000</pos.z>
+			<pos.z>-11.500000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -867,9 +877,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>6.500000</pos.x>
+			<pos.x>-3.500000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>0.000000</pos.z>
+			<pos.z>-12.500000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -935,9 +945,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>-11.250000</pos.x>
+			<pos.x>-11.000000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-9.500000</pos.z>
+			<pos.z>-7.500000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -1003,9 +1013,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>16.500000</pos.x>
+			<pos.x>17.000000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-12.750000</pos.z>
+			<pos.z>-11.750000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -1173,9 +1183,9 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>17.500000</pos.x>
+			<pos.x>18.750000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>8.250000</pos.z>
+			<pos.z>7.250000</pos.z>
 			<statesNum>2</statesNum>
 			<states>
 				<0>
@@ -1204,6 +1214,153 @@
 					<interactable>false</interactable>
 				</1>
 			</states>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-10.000000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-13.750000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-6.250000</pos.z>
+			<model>models/modular/bar_90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-2.500000</pos.z>
+			<model>models/modular/bar_conrner_01.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-9.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-11.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/Books90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-15.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/Books90.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-17.500000</pos.z>
+			<model>models/modular/bar_conrner_02.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-21.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-17.750000</pos.z>
+			<model>models/modular/bar.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-23.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-17.750000</pos.z>
+			<model>models/modular/bar.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-13.500000</pos.z>
+			<model>models/props/drinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-17.500000</pos.z>
+			<model>models/props/drinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-17.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-8.750000</pos.z>
+			<model>models/props/drinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-19.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-30.000000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>20.000000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-19.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>29.250000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>20.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>29.250000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>28.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>20.250000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>20.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>28.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
 		</instance>
 	</instances>
 	<light>
