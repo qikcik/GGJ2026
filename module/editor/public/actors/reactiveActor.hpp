@@ -11,6 +11,8 @@
 struct DialogOption
 {
     std::string label {};
+    std::string message {};
+    std::string exitMessage {"close"};
     std::string requiredTag {};
 
     std::string giveTag {};
@@ -68,6 +70,7 @@ struct ReactiveActorState
                 {
                     inSerialize->propertyStruct(std::to_string(i),[&](ISerialize* inSerialize) {
                         inSerialize->propertyString("label",dialogOptions[i].label);
+                        inSerialize->propertyString("message",dialogOptions[i].message);
                         inSerialize->propertyString("requiredTag",dialogOptions[i].requiredTag);
                         inSerialize->propertyString("giveTag",dialogOptions[i].giveTag);
                         inSerialize->propertyString("goToLevel",dialogOptions[i].goToLevel);

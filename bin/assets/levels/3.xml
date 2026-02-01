@@ -186,8 +186,50 @@
 			<TYPE>StaticActor</TYPE>
 			<pos.x>7.500000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>4.500000</pos.z>
+			<pos.z>7.750000</pos.z>
 			<model>models/props/trashcan.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-1.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>0.750000</pos.z>
+			<model>models/modular/Books.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-1.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>9.250000</pos.z>
+			<model>models/modular/Books.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-1.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-7.750000</pos.z>
+			<model>models/modular/Books.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-1.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-16.250000</pos.z>
+			<model>models/modular/Books.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>5.750002</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-15.250000</pos.z>
+			<model>models/props/table_NoDrinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>5.750003</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-5.750000</pos.z>
+			<model>models/props/table_NoDrinks.vox</model>
 		</instance>
 	</instances>
 	<light>
