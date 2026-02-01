@@ -67,7 +67,7 @@ public:
             items.push_back(it.c_str());
         }
 
-        if (ImGui::BeginCombo("Searchable Combo", selected_idx == -1 ? "Select..." : items[selected_idx])) {
+        if (ImGui::BeginCombo("Searchable Combo", selected.c_str())) {
             ImGui::InputText("##Filter", filter, IM_ARRAYSIZE(filter));
             ImGui::Separator();
 

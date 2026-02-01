@@ -36,7 +36,7 @@ public:
 
     }
 
-    std::string level_name {"playground"};
+    std::string level_name {"1"};
 
     void onImGuiDraw() override
     {

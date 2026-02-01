@@ -76,7 +76,6 @@ int main(void)
     WindowManager::get()->queueAddWindowView(std::make_unique<ConfigWindow>(gameContext.config,world));
     WindowManager::get()->queueAddWindowView(std::make_unique<TagsWindow>(gameContext));
     //WindowManager::get()->queueAddWindowView(std::make_unique<ProfilerWindow>());
-
     WindowManager::get()->run(
         Vec2i{1800,800},
         [&]
