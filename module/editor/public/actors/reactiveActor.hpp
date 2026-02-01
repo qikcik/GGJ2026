@@ -134,8 +134,8 @@ public:
     }
 
     BoundingBox getBoundingBox() override {
-        states[state].frames[frame].position = pos;
-        return states[state].frames[frame].boundingBox();
+        states[state].frames[0].position = pos;
+        return states[state].frames[0].boundingBox();
     }
 
     void onSerialize(ISerialize *inSerialize, GameContext &ctx) override {
