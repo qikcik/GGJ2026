@@ -14,6 +14,8 @@
 #include "../world.hpp"
 #include "actors/playerActor.hpp"
 #include "actors/reactiveActor.hpp"
+#include "gameplaymode/gameplayMode.hpp"
+#include "gameplaymode/playMode.hpp"
 #include "graphic3d/meshInstance.hpp"
 
 class PlayerActor;
@@ -47,6 +49,7 @@ public:
         auto& level = gameCtx.level;
         auto& shader = gameCtx.world.shader;
         auto& config = gameCtx.config;
+        gameCtx.mode = std::make_shared<PlayMode>(gameCtx);
 
         config.edCamera.position = level.cameraPosition;
         config.edCamera.target = level.cameraTarget;
@@ -56,12 +59,12 @@ public:
 
         for (auto it : level.actors) {
             if (auto p = std::dynamic_pointer_cast<PlayerActor>(it))
-                player = p;
+                gameCtx.player = p;
             if (auto p = std::dynamic_pointer_cast<ReactiveActor>(it))
-                interactable.push_back(p);
+                gameCtx.interactable.push_back(p);
         }
 
-        if (player == nullptr) {
+        if (gameCtx.player == nullptr) {
             pendingDestroy = true;
         }
 
@@ -89,17 +92,16 @@ protected:
     Matrix lightProj = { 0 };
     Matrix lightViewProj = { 0 };
     int textureActiveSlot = 10;
-
-    std::shared_ptr<PlayerActor>  player;
-    std::vector<std::shared_ptr<ReactiveActor>> interactable;
-
-    Mode mode {Mode::Normal};
-    std::shared_ptr<ReactiveActor> interactWith {};
-    std::vector<DialogOption> options;
 };
 
 inline void GameWindow::onUpdate(float deltaTime) {
+
+    if (gameCtx.nextMode) {
+        gameCtx.mode = gameCtx.nextMode;
+        gameCtx.nextMode = {};
+    }
     gameCtx.deltaTime = deltaTime;
+    gameCtx.size = size;
     auto _ = ScopeProfile("onUpdate");
 
     auto& world = gameCtx.world;
@@ -118,74 +120,8 @@ inline void GameWindow::onUpdate(float deltaTime) {
     mousePos.y = (GetMousePosition().y - renderer.lastRenderedScreenRect.y);
 
 
-    //logic here
-    if (mode == Mode::Normal) {
-        if (counter <= 0) {
-            auto prevPos = player->pos;
-
-            if (IsKeyDown(KEY_A))
-                player->pos.x -= 0.25;
-            if (IsKeyDown(KEY_D))
-                player->pos.x += 0.25;
-            if (IsKeyDown(KEY_W))
-                player->pos.z -= 0.25;
-            if (IsKeyDown(KEY_S))
-                player->pos.z += 0.25;
-
-            auto playerBox = player->getBoundingBox();
-            std::shared_ptr<ReactiveActor> other {};
-            for (auto it : interactable) {
-                if ( CheckCollisionBoxes(playerBox,it->getBoundingBox()))
-                    other = it;
-            }
-
-            if(other) {
-                player->pos = prevPos;
-                if (other->states[other->state].interactable) {
-                    interactWith = other;
-                    options.clear();
-                    for (auto it : interactWith->states[interactWith->state].dialogOptions)
-                        if (it.canPreform(gameCtx))
-                            options.push_back(it);
-                    mode = Mode::Dialog;
-                }
-            }
-
-            counter = (1.f/gameCtx.deltaTime) / 30.f;
-        }
-        counter--;
-    }
-    if (mode == Mode::Dialog) {
-        if (IsKeyPressed(KEY_ZERO))
-            mode = Mode::Normal;
-        if (IsKeyPressed(KEY_ONE))
-        {
-            if(options[0].giveTag != "")
-                gameCtx.world.tags.push_back(options[0].giveTag);
-            if(options[0].goToLevel != "")
-                WindowManager::get()->queueAddWindowView(std::make_unique<GameWindow>(gameCtx,options[0].goToLevel ));
-            mode = Mode::Normal;
-        }
-        if (IsKeyPressed(KEY_TWO))
-        {
-            if(options[1].giveTag != "")
-                gameCtx.world.tags.push_back(options[1].giveTag);
-            if(options[1].goToLevel != "")
-                WindowManager::get()->queueAddWindowView(std::make_unique<GameWindow>(gameCtx,options[1].goToLevel ));
-            mode = Mode::Normal;
-        }
-        if (IsKeyPressed(KEY_THREE))
-        {
-            if(options[2].giveTag != "")
-                gameCtx.world.tags.push_back(options[1].giveTag);
-            if(options[2].goToLevel != "")
-                WindowManager::get()->queueAddWindowView(std::make_unique<GameWindow>(gameCtx,options[2].goToLevel ));
-            mode = Mode::Normal;
-        }
-    }
-
-
     //game
+    gameCtx.mode->onUpdate();
 
     for(auto& it : gameCtx.level.actors) {
         it->onUpdate(gameCtx);
@@ -234,22 +170,14 @@ inline void GameWindow::onUpdate(float deltaTime) {
             if(config.grid)
                 DrawGrid(100,1);
             draw();
-        EndMode3D();
-
-        if (mode == Mode::Dialog) {
-            auto& c = interactWith->states[interactWith->state];
-            DrawRectangleVoxelWithOutline((Rectangle){ 16, 16, float(size.x-32), 300 }, 0, 2, WHITE, BLACK);
-            DrawText(c.initialMsg.c_str(),24,24,24,BLACK);
-
-            for (int i = 0; i!= options.size(); i++) {
-                auto str = std::to_string(i+1) + "." + options[i].label;
-
-                if (options[i].giveTag != "")
-                    DrawText(str.c_str(),24,24+32+(i*32),24,RED);
-                else
-                    DrawText(str.c_str(),24,24+32+(i*32),24,BLACK);
+            if ( gameCtx.player) {
+                auto box = gameCtx.player->getBoundingBox();
+                box.min.y += 1;
+                DrawBoundingBox(box,GREEN);
             }
-        }
+        EndMode3D();
+        gameCtx.mode->onDraw2D();
+
         DrawFPS(10,10);
     });
 }

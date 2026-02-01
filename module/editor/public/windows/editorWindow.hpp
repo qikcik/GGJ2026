@@ -11,6 +11,7 @@
 #include "textureRenderer.hpp"
 #include "window.hpp"
 #include "../world.hpp"
+#include "actors/playerActor.hpp"
 #include "graphic3d/meshInstance.hpp"
 
 class EditorContext;

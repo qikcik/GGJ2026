@@ -6,7 +6,7 @@
 #include "gameContext.hpp"
 #include "graphic3d/mesh.hpp"
 #include "graphic3d/meshInstance.hpp"
-
+#include "../gameContext.hpp"
 
 struct DialogOption
 {
