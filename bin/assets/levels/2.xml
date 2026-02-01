@@ -9,13 +9,6 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-1.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-9.500000</pos.z>
-			<model>models/props/table.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
 			<pos.x>10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
@@ -260,27 +253,6 @@
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>13.750000</pos.x>
-			<pos.y>1.500000</pos.y>
-			<pos.z>1.500000</pos.z>
-			<model>models/props/table_turnover.vox</model>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>14.250000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>-1.000000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Guest_Fight_01.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Guest_Fight_02.vox</model>
-			</frame2>
-		</instance>
-		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
 			<pos.x>17.250000</pos.x>
 			<pos.y>0.750000</pos.y>
@@ -292,20 +264,6 @@
 			</frame1>
 			<frame2>
 				<model>models/characters/character_Guest_Woman_Fight_01.vox</model>
-			</frame2>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-15.250000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>-22.250000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Guest_01_Red.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Guest_01_Red_crouch.vox</model>
 			</frame2>
 		</instance>
 		<instance>
@@ -428,20 +386,6 @@
 			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-3.750000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>4.750000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Main.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Main_crouch.vox</model>
-			</frame2>
-		</instance>
-		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-7.250000</pos.x>
 			<pos.y>0.500000</pos.y>
@@ -555,9 +499,9 @@
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>14.750001</pos.x>
+			<pos.x>17.000000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>6.750000</pos.z>
+			<pos.z>8.500000</pos.z>
 			<timeModifier>1.000001</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
@@ -569,34 +513,247 @@
 		</instance>
 		<instance>
 			<TYPE>ReactiveActor</TYPE>
-			<pos.x>-16.000000</pos.x>
-			<pos.y>2.250000</pos.y>
-			<pos.z>1.500000</pos.z>
-			<statesNum>2</statesNum>
+			<pos.x>-14.000000</pos.x>
+			<pos.y>0.750000</pos.y>
+			<pos.z>0.250000</pos.z>
+			<statesNum>1</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
 					<framesNum>2</framesNum>
 					<frames>
 						<0>
 							<model>models/characters/character_Worker_Blue.vox</model>
 						</0>
 						<1>
-							<model>models/characters/character_Guest_02_Green_crouch.vox</model>
+							<model>models/characters/character_Worker_Blue_crouch.vox</model>
 						</1>
 					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Hmmm dlaczego nie widze innych pracownikow</initialMsg>
+					<optionsNum>2</optionsNum>
+					<option>
+						<0>
+							<label>Odejdz</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</0>
+						<1>
+							<label>Ooo niebiaska maska</label>
+							<requiredTag>maskblue</requiredTag>
+							<giveTag/>
+							<goToLevel/>
+						</1>
+					</option>
+				</0>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>PlayerActor</TYPE>
+			<pos.x>5.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-0.750000</pos.z>
+			<model>models/characters/character_Main.vox</model>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>-16.250000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-22.250000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_01_Red.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guest_01_Red_crouch.vox</model>
+						</1>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Za duzo ludzi, za duzo</initialMsg>
+					<optionsNum>2</optionsNum>
+					<option>
+						<0>
+							<label>Odejdz</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</0>
+						<1>
+							<label>Czerwona maska widze</label>
+							<requiredTag>maskred</requiredTag>
+							<giveTag/>
+							<goToLevel/>
+						</1>
+					</option>
 				</0>
 				<1>
-					<requiredTag>bluemask</requiredTag>
+					<requiredTag>table turnoff</requiredTag>
+					<timeModifier>1.000000</timeModifier>
 					<framesNum>1</framesNum>
 					<frames>
 						<0>
-							<model>models/characters/character_Worker_Blue_Dead_NoMask.vox</model>
+							<model>models/AAA.vox</model>
 						</0>
 					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>13.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-2.500000</pos.z>
+			<statesNum>1</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_Fight_01.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guest_Fight_02.vox</model>
+						</1>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Gdzie jest moje 300 baniek</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>Uspokojcie sie</label>
+							<requiredTag/>
+							<giveTag>table turnoff</giveTag>
+							<goToLevel/>
+						</0>
+					</option>
+				</0>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>13.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>1.250000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/table_turnover.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>table turnoff</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/table_turnover_flipped.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>-0.750000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-8.000000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/props/table.vox</model>
+						</0>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg/>
+					<optionsNum>2</optionsNum>
+					<option>
+						<0>
+							<label>Wez drinka</label>
+							<requiredTag/>
+							<giveTag>table turnoff</giveTag>
+							<goToLevel/>
+						</0>
+						<1>
+							<label>Opusc</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</1>
+					</option>
+				</0>
+				<1>
+					<requiredTag>table turnoff</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/AAA.vox</model>
+						</0>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg/>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>Wez drinka</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</0>
+					</option>
 				</1>
 			</states>
 		</instance>
 	</instances>
+	<light>
+		<ambient>
+			<r>0.759615</r>
+			<g>0.533192</g>
+			<b>0.533192</b>
+			<a>0.000000</a>
+		</ambient>
+		<light>
+			<r>0.826923</r>
+			<g>0.532729</g>
+			<b>0.532729</b>
+			<a>0.000000</a>
+		</light>
+		<light.x>0.313678</light.x>
+		<light.y>-0.896221</light.y>
+		<light.z>-0.313678</light.z>
+	</light>
+	<camera>
+		<position.x>25.000000</position.x>
+		<position.y>25.000000</position.y>
+		<position.z>50.000000</position.z>
+		<target.x>4.775684</target.x>
+		<target.y>4.258984</target.y>
+		<target.z>-3.951721</target.z>
+		<fovy>30.000000</fovy>
+	</camera>
 </root>
 

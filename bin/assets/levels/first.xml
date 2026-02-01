@@ -834,11 +834,11 @@
 						<0>
 							<label>Opowiedz mi o tych maskach</label>
 							<requiredTag>aboutmask</requiredTag>
-							<giveTag>pistol_out</giveTag>
+							<giveTag/>
 							<goToLevel/>
 						</0>
 						<1>
-							<label>Pomoz przemycic</label>
+							<label>Pomoz przemycic mi bron</label>
 							<requiredTag/>
 							<giveTag>pistol_out</giveTag>
 							<goToLevel/>
