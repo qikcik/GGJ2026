@@ -184,11 +184,37 @@
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-2.500000</pos.x>
+			<pos.x>7.500000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>0.000000</pos.z>
+			<pos.z>4.500000</pos.z>
 			<model>models/props/trashcan.vox</model>
 		</instance>
 	</instances>
+	<light>
+		<ambient>
+			<r>0.759615</r>
+			<g>0.533192</g>
+			<b>0.533192</b>
+			<a>0.000000</a>
+		</ambient>
+		<light>
+			<r>0.826923</r>
+			<g>0.532729</g>
+			<b>0.532729</b>
+			<a>0.000000</a>
+		</light>
+		<light.x>0.313678</light.x>
+		<light.y>-0.896221</light.y>
+		<light.z>-0.313678</light.z>
+	</light>
+	<camera>
+		<position.x>25.000000</position.x>
+		<position.y>25.000000</position.y>
+		<position.z>50.000000</position.z>
+		<target.x>4.775684</target.x>
+		<target.y>4.258984</target.y>
+		<target.z>-3.951721</target.z>
+		<fovy>30.000000</fovy>
+	</camera>
 </root>
 
