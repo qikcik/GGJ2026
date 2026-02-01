@@ -351,20 +351,6 @@
 			<model>models/props/table_NoDrinks.vox</model>
 		</instance>
 		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>16.500000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>6.500000</pos.z>
-			<timeModifier>1.000001</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<model>models/characters/character_Guest_03_Green.vox</model>
-			</frame1>
-			<frame2>
-				<model>models/characters/character_Guest_03_Green_crouch.vox</model>
-			</frame2>
-		</instance>
-		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>10.250000</pos.x>
 			<pos.y>0.500000</pos.y>
@@ -376,7 +362,7 @@
 			<pos.x>-8.500000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>7.250000</pos.z>
-			<statesNum>2</statesNum>
+			<statesNum>3</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
@@ -417,15 +403,36 @@
 							<model>models/characters/character_Worker_Blue_Dead_Mask.vox</model>
 						</0>
 					</frames>
-					<interactable>false</interactable>
+					<interactable>true</interactable>
+					<initialMsg>Ooo niebieska maska</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>wez maske</label>
+							<requiredTag/>
+							<giveTag>maskblue</giveTag>
+							<goToLevel/>
+						</0>
+					</option>
 				</1>
+				<2>
+					<requiredTag>maskblue</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Worker_Blue_Dead_NoMask.vox</model>
+						</0>
+					</frames>
+					<interactable>false</interactable>
+				</2>
 			</states>
 		</instance>
 		<instance>
 			<TYPE>PlayerActor</TYPE>
-			<pos.x>10.000000</pos.x>
+			<pos.x>1.750000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>8.500000</pos.z>
+			<pos.z>8.750000</pos.z>
 			<model>models/characters/character_Main.vox</model>
 		</instance>
 		<instance>
@@ -527,7 +534,7 @@
 			<pos.x>13.500000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>1.250000</pos.z>
-			<statesNum>2</statesNum>
+			<statesNum>3</statesNum>
 			<states>
 				<0>
 					<requiredTag/>
@@ -549,8 +556,45 @@
 							<model>models/props/table_turnover_flipped.vox</model>
 						</0>
 					</frames>
-					<interactable>false</interactable>
+					<interactable>true</interactable>
+					<initialMsg/>
+					<optionsNum>2</optionsNum>
+					<option>
+						<0>
+							<label>schowaj sie</label>
+							<requiredTag/>
+							<giveTag>shooting</giveTag>
+							<goToLevel/>
+						</0>
+						<1>
+							<label>odejdz</label>
+							<requiredTag/>
+							<giveTag/>
+							<goToLevel/>
+						</1>
+					</option>
 				</1>
+				<2>
+					<requiredTag>beforshoting</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/AAA.vox</model>
+						</0>
+					</frames>
+					<interactable>true</interactable>
+					<initialMsg>Mozna sie za nim schowac</initialMsg>
+					<optionsNum>1</optionsNum>
+					<option>
+						<0>
+							<label>schowaj sie</label>
+							<requiredTag>beforshoting</requiredTag>
+							<giveTag>shooting</giveTag>
+							<goToLevel/>
+						</0>
+					</option>
+				</2>
 			</states>
 		</instance>
 		<instance>
@@ -1122,6 +1166,40 @@
 						<1>
 							<model>models/characters/character_Shooter_Shooting_02.vox</model>
 						</1>
+					</frames>
+					<interactable>false</interactable>
+				</1>
+			</states>
+		</instance>
+		<instance>
+			<TYPE>ReactiveActor</TYPE>
+			<pos.x>17.500000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>8.250000</pos.z>
+			<statesNum>2</statesNum>
+			<states>
+				<0>
+					<requiredTag/>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>2</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_03_Green.vox</model>
+						</0>
+						<1>
+							<model>models/characters/character_Guest_03_Green_crouch.vox</model>
+						</1>
+					</frames>
+					<interactable>false</interactable>
+				</0>
+				<1>
+					<requiredTag>shooting</requiredTag>
+					<timeModifier>1.000000</timeModifier>
+					<framesNum>1</framesNum>
+					<frames>
+						<0>
+							<model>models/characters/character_Guest_03_Green_crouch.vox</model>
+						</0>
 					</frames>
 					<interactable>false</interactable>
 				</1>
