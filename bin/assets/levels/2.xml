@@ -5,11 +5,6 @@
 			<pos.x>10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>10.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -17,11 +12,6 @@
 			<pos.x>-1.750000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>-9.500000</pos.z>
-			<position>
-				<x>-1.750000</x>
-				<y>0.500000</y>
-				<z>-9.500000</z>
-			</position>
 			<model>models/props/table.vox</model>
 		</instance>
 		<instance>
@@ -29,11 +19,6 @@
 			<pos.x>10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>10.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -41,11 +26,6 @@
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>0.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -53,11 +33,6 @@
 			<pos.x>-10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>-10.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -65,11 +40,6 @@
 			<pos.x>-10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-10.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -77,11 +47,6 @@
 			<pos.x>-10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>-10.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -89,11 +54,6 @@
 			<pos.x>10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-30.000000</pos.z>
-			<position>
-				<x>10.000000</x>
-				<y>0.000000</y>
-				<z>-30.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -101,11 +61,6 @@
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>0.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -113,23 +68,6 @@
 			<pos.x>20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>20.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>30.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -137,23 +75,6 @@
 			<pos.x>20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>20.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>30.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -161,35 +82,6 @@
 			<pos.x>20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>20.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>0.000000</pos.z>
-			<position>
-				<x>30.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>10.000000</pos.z>
-			<position>
-				<x>30.000000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -197,11 +89,6 @@
 			<pos.x>20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>20.000000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -209,11 +96,6 @@
 			<pos.x>10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>10.000000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -221,11 +103,6 @@
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>0.000000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -233,11 +110,6 @@
 			<pos.x>-10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>-10.000000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -245,11 +117,6 @@
 			<pos.x>-10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-30.000000</pos.z>
-			<position>
-				<x>-10.000000</x>
-				<y>0.000000</y>
-				<z>-30.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -257,11 +124,6 @@
 			<pos.x>10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>10.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -269,11 +131,6 @@
 			<pos.x>20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-30.000000</pos.z>
-			<position>
-				<x>20.000000</x>
-				<y>0.000000</y>
-				<z>-30.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -281,11 +138,6 @@
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-30.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>-30.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -293,11 +145,6 @@
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -305,11 +152,6 @@
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -317,71 +159,6 @@
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>0.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>10.000000</pos.z>
-			<position>
-				<x>-30.000000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>30.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>30.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>30.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>30.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>30.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>30.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-20.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>30.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>30.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -389,23 +166,6 @@
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-9.250000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>20.500000</pos.z>
-			<position>
-				<x>-9.250000</x>
-				<y>0.000000</y>
-				<z>20.500000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -413,11 +173,6 @@
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>0.000000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -425,23 +180,6 @@
 			<pos.x>10.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>10.000000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>-20.000000</pos.z>
-			<position>
-				<x>-30.000000</x>
-				<y>0.000000</y>
-				<z>-20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -449,155 +187,13 @@
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>-30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>-30.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>0.000000</pos.z>
-			<position>
-				<x>-30.000000</x>
-				<y>0.000000</y>
-				<z>0.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>15.750000</pos.x>
+			<pos.x>28.500000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>-29.500000</pos.z>
-			<position>
-				<x>15.750000</x>
-				<y>0.500000</y>
-				<z>-29.500000</z>
-			</position>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>5.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.500000</pos.z>
-			<position>
-				<x>5.750000</x>
-				<y>0.500000</y>
-				<z>-29.500000</z>
-			</position>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-4.250000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.500000</pos.z>
-			<position>
-				<x>-4.250000</x>
-				<y>0.500000</y>
-				<z>-29.500000</z>
-			</position>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-14.250000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.500000</pos.z>
-			<position>
-				<x>-14.250000</x>
-				<y>0.500000</y>
-				<z>-29.500000</z>
-			</position>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>-30.000000</pos.z>
-			<position>
-				<x>30.000000</x>
-				<y>0.000000</y>
-				<z>-30.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>25.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.500000</pos.z>
-			<position>
-				<x>25.750000</x>
-				<y>0.500000</y>
-				<z>-29.500000</z>
-			</position>
-			<model>models/modular/wall_Corner_Right_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>34.500000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-19.500000</pos.z>
-			<position>
-				<x>34.500000</x>
-				<y>0.500000</y>
-				<z>-19.500000</z>
-			</position>
-			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>34.500000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-9.500000</pos.z>
-			<position>
-				<x>34.500000</x>
-				<y>0.500000</y>
-				<z>-9.500000</z>
-			</position>
-			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>34.500000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>0.500000</pos.z>
-			<position>
-				<x>34.500000</x>
-				<y>0.500000</y>
-				<z>0.500000</z>
-			</position>
-			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>34.500000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>10.500000</pos.z>
-			<position>
-				<x>34.500000</x>
-				<y>0.500000</y>
-				<z>10.500000</z>
-			</position>
+			<pos.z>10.250000</pos.z>
 			<model>models/modular/wall_90_Brick.vox</model>
 		</instance>
 		<instance>
@@ -605,202 +201,47 @@
 			<pos.x>20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>20.000000</pos.z>
-			<position>
-				<x>20.000000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>20.000000</pos.z>
-			<position>
-				<x>30.000000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>16.250000</pos.x>
+			<pos.x>10.250000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>29.250000</pos.z>
-			<position>
-				<x>16.250000</x>
-				<y>0.500000</y>
-				<z>29.250000</z>
-			</position>
 			<model>models/modular/wall_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>6.250000</pos.x>
+			<pos.x>-20.000000</pos.x>
 			<pos.y>0.500000</pos.y>
-			<pos.z>29.250000</pos.z>
-			<position>
-				<x>6.250000</x>
-				<y>0.500000</y>
-				<z>29.250000</z>
-			</position>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-3.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>29.250000</pos.z>
-			<position>
-				<x>-3.750000</x>
-				<y>0.500000</y>
-				<z>29.250000</z>
-			</position>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-13.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>29.250000</pos.z>
-			<position>
-				<x>-13.750000</x>
-				<y>0.500000</y>
-				<z>29.250000</z>
-			</position>
-			<model>models/modular/wall_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-23.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>20.750000</pos.z>
-			<position>
-				<x>-23.750000</x>
-				<y>0.500000</y>
-				<z>20.750000</z>
-			</position>
-			<model>models/modular/wall_Corner_Left_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-23.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>10.500000</pos.z>
-			<position>
-				<x>-23.750000</x>
-				<y>0.500000</y>
-				<z>10.500000</z>
-			</position>
+			<pos.z>-20.000000</pos.z>
 			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-23.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>0.500000</pos.z>
-			<position>
-				<x>-23.750000</x>
-				<y>0.500000</y>
-				<z>0.500000</z>
-			</position>
-			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-23.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-9.500000</pos.z>
-			<position>
-				<x>-23.750000</x>
-				<y>0.500000</y>
-				<z>-9.500000</z>
-			</position>
-			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-23.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-19.500000</pos.z>
-			<position>
-				<x>-23.750000</x>
-				<y>0.500000</y>
-				<z>-19.500000</z>
-			</position>
-			<model>models/modular/wall_90_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-23.750000</pos.x>
-			<pos.y>0.500000</pos.y>
-			<pos.z>-29.500000</pos.z>
-			<position>
-				<x>-23.750000</x>
-				<y>0.500000</y>
-				<z>-29.500000</z>
-			</position>
-			<model>models/modular/wall_Corner_Brick.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>-30.000000</pos.z>
-			<position>
-				<x>-30.000000</x>
-				<y>0.000000</y>
-				<z>-30.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
 			<pos.x>-20.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>10.000000</pos.z>
-			<position>
-				<x>-20.000000</x>
-				<y>0.000000</y>
-				<z>10.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
 			<TYPE>StaticActor</TYPE>
-			<pos.x>25.750000</pos.x>
+			<pos.x>19.750000</pos.x>
 			<pos.y>0.500000</pos.y>
 			<pos.z>20.500000</pos.z>
-			<position>
-				<x>25.750000</x>
-				<y>0.500000</y>
-				<z>20.500000</z>
-			</position>
 			<model>models/modular/wall_Corner_Down_Brick.vox</model>
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>1.500000</pos.x>
+			<pos.x>-4.500000</pos.x>
 			<pos.y>1.000000</pos.y>
 			<pos.z>-26.750000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
-				<position>
-					<x>1.500000</x>
-					<y>1.000000</y>
-					<z>-26.750000</z>
-				</position>
 				<model>models/characters/character_PartyMaster.vox</model>
 			</frame1>
 			<frame2>
-				<position>
-					<x>1.500000</x>
-					<y>1.000000</y>
-					<z>-26.750000</z>
-				</position>
 				<model>models/characters/character_PartyMaster_crouch.vox</model>
 			</frame2>
 		</instance>
@@ -809,11 +250,6 @@
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-30.000000</pos.z>
-			<position>
-				<x>0.000000</x>
-				<y>0.000000</y>
-				<z>-30.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -821,23 +257,6 @@
 			<pos.x>0.000000</pos.x>
 			<pos.y>0.000000</pos.y>
 			<pos.z>-10.000000</pos.z>
-			<position>
-				<x>0.000000</x>
-				<y>0.000000</y>
-				<z>-10.000000</z>
-			</position>
-			<model>models/modular/Floor_Wood.vox</model>
-		</instance>
-		<instance>
-			<TYPE>StaticActor</TYPE>
-			<pos.x>-30.000000</pos.x>
-			<pos.y>0.000000</pos.y>
-			<pos.z>20.000000</pos.z>
-			<position>
-				<x>-30.000000</x>
-				<y>0.000000</y>
-				<z>20.000000</z>
-			</position>
 			<model>models/modular/Floor_Wood.vox</model>
 		</instance>
 		<instance>
@@ -845,131 +264,321 @@
 			<pos.x>13.750000</pos.x>
 			<pos.y>1.500000</pos.y>
 			<pos.z>1.500000</pos.z>
-			<position>
-				<x>13.750000</x>
-				<y>1.500000</y>
-				<z>1.500000</z>
-			</position>
 			<model>models/props/table_turnover.vox</model>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>13.500000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>-1.750000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<position>
-					<x>13.500000</x>
-					<y>1.000000</y>
-					<z>-1.750000</z>
-				</position>
-				<model>models/characters/character_Guest_01_Green.vox</model>
-			</frame1>
-			<frame2>
-				<position>
-					<x>13.500000</x>
-					<y>1.000000</y>
-					<z>-1.750000</z>
-				</position>
-				<model>models/characters/character_Guest_01_Green_crouch.vox</model>
-			</frame2>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>19.500000</pos.x>
-			<pos.y>0.750000</pos.y>
-			<pos.z>-1.250000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<position>
-					<x>19.500000</x>
-					<y>0.750000</y>
-					<z>-1.250000</z>
-				</position>
-				<model>models/characters/character_Guest_Woman_Green.vox</model>
-			</frame1>
-			<frame2>
-				<position>
-					<x>19.500000</x>
-					<y>0.750000</y>
-					<z>-1.250000</z>
-				</position>
-				<model>models/characters/character_Guest_Woman_Green_crouch.vox</model>
-			</frame2>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-17.250000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>1.500000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<position>
-					<x>-17.250000</x>
-					<y>1.000000</y>
-					<z>1.500000</z>
-				</position>
-				<model>models/characters/character_Worker_Blue.vox</model>
-			</frame1>
-			<frame2>
-				<position>
-					<x>-17.250000</x>
-					<y>1.000000</y>
-					<z>1.500000</z>
-				</position>
-				<model>models/characters/character_Worker_Blue_Dead_Mask.vox</model>
-			</frame2>
-		</instance>
-		<instance>
-			<TYPE>SimpleAnimationActor</TYPE>
-			<pos.x>-19.500000</pos.x>
-			<pos.y>1.000000</pos.y>
-			<pos.z>-22.250000</pos.z>
-			<timeModifier>1.000000</timeModifier>
-			<frameNum>2</frameNum>
-			<frame1>
-				<position>
-					<x>-19.500000</x>
-					<y>1.000000</y>
-					<z>-22.250000</z>
-				</position>
-				<model>models/characters/character_Guest_01_Red.vox</model>
-			</frame1>
-			<frame2>
-				<position>
-					<x>-19.500000</x>
-					<y>1.000000</y>
-					<z>-22.250000</z>
-				</position>
-				<model>models/characters/character_Guest_01_Red_crouch.vox</model>
-			</frame2>
 		</instance>
 		<instance>
 			<TYPE>SimpleAnimationActor</TYPE>
 			<pos.x>14.250000</pos.x>
 			<pos.y>1.000000</pos.y>
-			<pos.z>-29.750000</pos.z>
+			<pos.z>-1.000000</pos.z>
 			<timeModifier>1.000000</timeModifier>
 			<frameNum>2</frameNum>
 			<frame1>
-				<position>
-					<x>14.250000</x>
-					<y>1.000000</y>
-					<z>-29.750000</z>
-				</position>
+				<model>models/characters/character_Guest_Fight_01.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_Fight_02.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>17.250000</pos.x>
+			<pos.y>0.750000</pos.y>
+			<pos.z>-1.250000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_Woman_Fight_02.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_Woman_Fight_01.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-15.000000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>1.250000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Worker_Blue.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Worker_Blue_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-15.250000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-22.250000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_01_Red.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_01_Red_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>11.000000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-28.750000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
 				<model>models/characters/character_Guard.vox</model>
 			</frame1>
 			<frame2>
-				<position>
-					<x>14.250000</x>
-					<y>1.000000</y>
-					<z>-29.750000</z>
-				</position>
 				<model>models/characters/character_Guard_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>10.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-34.000000</pos.z>
+			<model>models/modular/wall_Door_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>28.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>0.250000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>28.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-9.750000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>28.500000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-19.750000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>20.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Corner_Right_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>0.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-9.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-29.750000</pos.z>
+			<model>models/modular/wall_Corner_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-10.000000</pos.x>
+			<pos.y>0.000000</pos.y>
+			<pos.z>20.000000</pos.z>
+			<model>models/modular/Floor_Wood.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-10.000000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>0.000000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>10.000000</pos.z>
+			<model>models/modular/wall_90_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-20.000000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>20.750000</pos.z>
+			<model>models/modular/wall_Corner_Left_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>0.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>29.250000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-9.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>29.250000</pos.z>
+			<model>models/modular/wall_Brick.vox</model>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-7.750000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>12.750000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Main.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Main_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-7.250000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-18.750000</pos.z>
+			<model>models/props/table_NoDrinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>StaticActor</TYPE>
+			<pos.x>-12.750000</pos.x>
+			<pos.y>0.500000</pos.y>
+			<pos.z>-1.250000</pos.z>
+			<model>models/props/table_NoDrinks.vox</model>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-1.500000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-9.250000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_02_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_02_Green_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>1.000000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-11.500000</pos.z>
+			<timeModifier>1.000001</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_03_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_03_Green_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>5.500000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-14.000000</pos.z>
+			<timeModifier>1.000002</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_Woman_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_Woman_Green_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-10.250000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-5.000000</pos.z>
+			<timeModifier>1.000001</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_03_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_03_Green_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-6.999999</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-1.750001</pos.z>
+			<timeModifier>1.000002</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_Woman_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_Woman_Green_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>-8.999999</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-15.750000</pos.z>
+			<timeModifier>1.000001</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_01_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_01_Green_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>14.000000</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>-11.500000</pos.z>
+			<timeModifier>1.000000</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_02_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_02_Green_crouch.vox</model>
+			</frame2>
+		</instance>
+		<instance>
+			<TYPE>SimpleAnimationActor</TYPE>
+			<pos.x>14.750001</pos.x>
+			<pos.y>1.000000</pos.y>
+			<pos.z>6.750000</pos.z>
+			<timeModifier>1.000001</timeModifier>
+			<frameNum>2</frameNum>
+			<frame1>
+				<model>models/characters/character_Guest_03_Green.vox</model>
+			</frame1>
+			<frame2>
+				<model>models/characters/character_Guest_03_Green_crouch.vox</model>
 			</frame2>
 		</instance>
 	</instances>
